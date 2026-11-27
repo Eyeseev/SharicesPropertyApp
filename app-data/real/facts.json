@@ -1,0 +1,423 @@
+[
+  {
+    "id": "address",
+    "category": "identity",
+    "field": "Address",
+    "value": "138-37 250th Street, Rosedale, NY 11422",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1",
+      "S2"
+    ],
+    "notes": "Confirmed by the owner side and matches PLUTO and PAD."
+  },
+  {
+    "id": "address-alt",
+    "category": "identity",
+    "field": "Alternate address on record",
+    "value": "250-01 139th Ave, Rosedale, NY 11422",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S2"
+    ],
+    "notes": "Corner lot with two street frontages."
+  },
+  {
+    "id": "bbl",
+    "category": "identity",
+    "field": "Borough-Block-Lot",
+    "value": "4136180005 (Queens, Block 13618, Lot 5)",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1",
+      "S2"
+    ]
+  },
+  {
+    "id": "bin",
+    "category": "identity",
+    "field": "Building ID (BIN)",
+    "value": "4289397",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S2"
+    ]
+  },
+  {
+    "id": "coordinates",
+    "category": "identity",
+    "field": "Coordinates",
+    "value": "40.6628678, -73.7305241",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "zoning",
+    "category": "identity",
+    "field": "Zoning",
+    "value": "R3X (zoning map 19d)",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "community-district",
+    "category": "identity",
+    "field": "Community district",
+    "value": "413 (Queens CB13)",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "council-district",
+    "category": "identity",
+    "field": "Council district",
+    "value": "31",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "school-district",
+    "category": "identity",
+    "field": "School district",
+    "value": "29",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "police-precinct",
+    "category": "identity",
+    "field": "Police precinct",
+    "value": "116",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "lot-size",
+    "category": "parcel",
+    "field": "Lot",
+    "value": "50 × 100 ft (5,000 sq ft), corner lot",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ],
+    "notes": "PLUTO nominal dimensions."
+  },
+  {
+    "id": "lot-measured",
+    "category": "parcel",
+    "field": "Surveyed lot outline",
+    "value": "≈ 51.1 × 100.4 ft",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S17"
+    ],
+    "notes": "Measured from the official DOF Digital Tax Map polygon."
+  },
+  {
+    "id": "frontages",
+    "category": "parcel",
+    "field": "Street frontages",
+    "value": "250th Street (NW end, 50 ft) and 139th Avenue (SW side, 100 ft)",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S17"
+    ],
+    "notes": "The NE long side is an interior lot line against 138-33.",
+    "conflictId": "street-frontage"
+  },
+  {
+    "id": "elevation",
+    "category": "parcel",
+    "field": "Ground elevation",
+    "value": "≈ 16.4 ft, flat",
+    "evidence": "verified",
+    "confidence": "medium",
+    "sourceIds": [
+      "S7"
+    ],
+    "notes": "USGS point sample."
+  },
+  {
+    "id": "year-built",
+    "category": "building",
+    "field": "Year built (city record)",
+    "value": "1945",
+    "evidence": "verified",
+    "confidence": "medium",
+    "sourceIds": [
+      "S1",
+      "S8",
+      "S11",
+      "S23"
+    ],
+    "notes": "Disputed: a 1939–41 tax photo may show this house already standing. Treat 1945 as the official record, not as settled.",
+    "conflictId": "build-year"
+  },
+  {
+    "id": "building-class",
+    "category": "building",
+    "field": "Building class",
+    "value": "A2: one-story, permanent living quarter",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "style",
+    "category": "building",
+    "field": "Style",
+    "value": "1.5-storey Cape Cod",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S9",
+      "S11"
+    ]
+  },
+  {
+    "id": "floors",
+    "category": "building",
+    "field": "Floors",
+    "value": "1.5",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1",
+      "S11"
+    ]
+  },
+  {
+    "id": "units",
+    "category": "building",
+    "field": "Residential units",
+    "value": "1",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "buildings",
+    "category": "building",
+    "field": "Buildings on the lot",
+    "value": "2 (house and detached garage)",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "walls",
+    "category": "building",
+    "field": "House walls",
+    "value": "22 × 42 ft",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ]
+  },
+  {
+    "id": "roof-outline",
+    "category": "building",
+    "field": "House roof outline",
+    "value": "24.2 × 50.5 ft, roof height 21.7 ft",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S16"
+    ],
+    "notes": "Official footprint outline: includes eaves and the SE extension."
+  },
+  {
+    "id": "garage-size",
+    "category": "building",
+    "field": "Detached garage",
+    "value": "19.4 × 10.2 ft, roof height 11.5 ft",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S16"
+    ]
+  },
+  {
+    "id": "floor-area",
+    "category": "building",
+    "field": "Gross building area",
+    "value": "1,052 sq ft",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1"
+    ],
+    "notes": "PropertyShark reads 1,050 sq ft.",
+    "conflictId": "floor-area"
+  },
+  {
+    "id": "construction",
+    "category": "building",
+    "field": "Construction",
+    "value": "Frame, brick ground floor; detached frame garage",
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8",
+      "S9"
+    ]
+  },
+  {
+    "id": "basement",
+    "category": "building",
+    "field": "Basement",
+    "value": "Present",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S1",
+      "S9"
+    ],
+    "notes": "PLUTO basement code 2; barred basement windows seen on the 139th Ave side."
+  },
+  {
+    "id": "extension",
+    "category": "building",
+    "field": "SE extension",
+    "value": "Single-storey, white. Present by 2004 aerial; construction date unknown",
+    "evidence": "historical_approximation",
+    "confidence": "medium",
+    "sourceIds": [
+      "S1",
+      "S9",
+      "S21"
+    ],
+    "notes": "PLUTO records an extension but no alteration year; no permit found."
+  },
+  {
+    "id": "beds-baths",
+    "category": "building",
+    "field": "Bedrooms / bathrooms",
+    "value": "3 bed / 1 bath (third-party claim)",
+    "evidence": "reported",
+    "confidence": "low",
+    "sourceIds": [
+      "S12"
+    ],
+    "notes": "Not in any official record. Owner confirmation needed."
+  },
+  {
+    "id": "renovations",
+    "category": "building",
+    "field": "Renovation history",
+    "value": null,
+    "evidence": "unknown",
+    "confidence": "low",
+    "sourceIds": [
+      "S4",
+      "S5",
+      "S20"
+    ],
+    "notes": "No digital permit exists. Renovation dates are owner knowledge."
+  },
+  {
+    "id": "dob-records",
+    "category": "building",
+    "field": "DOB jobs, permits and violations",
+    "value": "0 records in all three DOB systems",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S4",
+      "S5",
+      "S20"
+    ],
+    "notes": "Absence in digital systems does not prove no work occurred."
+  },
+  {
+    "id": "flood-zone",
+    "category": "environment",
+    "field": "FEMA flood zone",
+    "value": "Zone X: minimal flood hazard (not a Special Flood Hazard Area)",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S18"
+    ],
+    "notes": "FEMA NFHL, DFIRM 360497."
+  },
+  {
+    "id": "evacuation-zone",
+    "category": "environment",
+    "field": "Hurricane evacuation zone",
+    "value": "4",
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "terrain",
+    "category": "context",
+    "field": "Local terrain",
+    "value": "Low-lying former farmland near Hook Creek; neighbourhood-level flooding is documented",
+    "evidence": "reported",
+    "confidence": "low",
+    "sourceIds": [
+      "S15",
+      "S7"
+    ],
+    "notes": "Local context only. No evidence this property flooded."
+  },
+  {
+    "id": "walkability",
+    "category": "context",
+    "field": "Walk / transit / bike score",
+    "value": "86 / 64 / 57",
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "area-median",
+    "category": "context",
+    "field": "Neighbourhood median sale price",
+    "value": "Rosedale $740,000; Queens $765,000 (crawl, Oct–Nov 2026)",
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Neighbourhood statistic, not a value of this property."
+  }
+]

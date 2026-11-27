@@ -166,5 +166,32 @@
     "retrieved": "2026-11-27",
     "rights": "usable_data",
     "established": "0 permits for BIN 4289397 (jobs, violations and permits all zero)"
+  },
+  {
+    "id": "S21",
+    "name": "NYC OTI orthophotography via ArcGIS tile services (CC BY 4.0)",
+    "type": "official",
+    "url": "https://maps.nyc.gov/tiles",
+    "retrieved": "2026-11-27",
+    "rights": "usable_data",
+    "established": "Fifteen aerial crops of the lot, 1924–2024. © City of New York, CC BY 4.0: attribution required"
+  },
+  {
+    "id": "S22",
+    "name": "NYC Municipal Archives 1980s tax photo (REC-0041), via the 80s.nyc mirror",
+    "type": "official",
+    "url": "https://80snyc.bdon.org/photos/4/13618/0005.jpg",
+    "retrieved": "2026-11-27",
+    "rights": "unknown",
+    "established": "c. 1982–88 street photo of the house (placard: Block 13618, Lot 5). Private reference only; hi-res prints are paid"
+  },
+  {
+    "id": "S23",
+    "name": "NYC Municipal Archives 1940s tax photo (REC-0040), via the 1940s.nyc mirror",
+    "type": "official",
+    "url": "https://1940s.nyc/map/photo/nynyma_rec0040_4_04931_0005_w4",
+    "retrieved": "2026-11-27",
+    "rights": "link_only",
+    "established": "c. 1939–41 street photo (sign \"4931 - 5 Q\"). Link only; the site blocks file downloads"
   }
 ]

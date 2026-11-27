@@ -3,10 +3,15 @@
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import type { PropertyData } from '@/data/loader'
-import { initialQuality, useApp, type PresetId } from '@/state/store'
+import { MODES, initialQuality, useApp, type Mode, type PresetId } from '@/state/store'
 import { TopBar } from './TopBar'
 import { CameraRail } from './CameraRail'
 import { SelectionPopup } from './SelectionPopup'
+import { DataProvider } from './DataContext'
+import { FinancialsPanel } from './FinancialsPanel'
+import { ChroniclePanel } from './ChroniclePanel'
+import { PhotosPanel } from './PhotosPanel'
+import { InfoDrawer } from './InfoDrawer'
 
 const Scene = dynamic(() => import('@/scene/Scene').then((m) => m.Scene), {
   ssr: false,
@@ -26,6 +31,8 @@ export function Explorer() {
   const [error, setError] = useState<string | null>(null)
   const goTo = useApp((s) => s.goTo)
   const select = useApp((s) => s.select)
+  const mode = useApp((s) => s.mode)
+  const panelOpen = useApp((s) => s.panelOpen)
 
   // Remembered (or device-guessed) quality tier; applied once after mount to avoid SSR mismatch.
   useEffect(() => {
@@ -46,10 +53,30 @@ export function Explorer() {
     }
   }, [])
 
+  // Deep link: ?mode=financials|chronicle|photos. Kept in the URL so a view can be shared privately.
+  useEffect(() => {
+    const m = new URLSearchParams(window.location.search).get('mode') as Mode | null
+    if (m && MODES.includes(m)) useApp.getState().setMode(m)
+  }, [])
+  useEffect(() => {
+    const url = new URL(window.location.href)
+    if (mode === 'explorer') url.searchParams.delete('mode')
+    else url.searchParams.set('mode', mode)
+    window.history.replaceState(null, '', url)
+  }, [mode])
+
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => {
       const tag = (e.target as HTMLElement | null)?.tagName
-      if (tag === 'INPUT' || tag === 'TEXTAREA' || e.metaKey || e.ctrlKey || e.altKey) return
+      if (
+        tag === 'INPUT' ||
+        tag === 'TEXTAREA' ||
+        tag === 'SELECT' ||
+        e.metaKey ||
+        e.ctrlKey ||
+        e.altKey
+      )
+        return
       if (e.key === 'Escape') select(null)
       const preset = KEY_PRESETS[e.key]
       if (preset) goTo(preset)
@@ -59,7 +86,11 @@ export function Explorer() {
   }, [goTo, select])
 
   return (
-    <div className="app">
+    <div
+      className="app"
+      data-mode={mode}
+      data-panel={mode !== 'explorer' && panelOpen ? 'open' : 'closed'}
+    >
       <div className="scene-layer">
         {data && <Scene spec={data.geometry} cameras={data.cameras} />}
         {error && (
@@ -69,8 +100,16 @@ export function Explorer() {
         )}
       </div>
       <TopBar />
-      {data && <CameraRail cameras={data.cameras} />}
-      {data && <SelectionPopup spec={data.geometry} sources={data.sources} />}
+      {data && (
+        <DataProvider value={data}>
+          <CameraRail cameras={data.cameras} />
+          <SelectionPopup spec={data.geometry} sources={data.sources} />
+          <InfoDrawer />
+          {mode === 'financials' && <FinancialsPanel />}
+          {mode === 'chronicle' && <ChroniclePanel />}
+          {mode === 'photos' && <PhotosPanel />}
+        </DataProvider>
+      )}
     </div>
   )
 }

@@ -1,13 +1,13 @@
 'use client'
 
 import { signOut } from 'next-auth/react'
-import { useApp, type QualityTier } from '@/state/store'
+import { useApp, type Mode, type QualityTier } from '@/state/store'
 
-const TABS = [
-  { id: 'explorer', label: 'Property Explorer', active: true },
-  { id: 'financials', label: 'Financials', active: false },
-  { id: 'chronicle', label: 'Chronicle', active: false },
-  { id: 'photos', label: 'Photos', active: false },
+const TABS: { id: Mode; label: string }[] = [
+  { id: 'explorer', label: 'Property Explorer' },
+  { id: 'financials', label: 'Financials' },
+  { id: 'chronicle', label: 'Chronicle' },
+  { id: 'photos', label: 'Photos' },
 ]
 
 const TIERS: { id: QualityTier; label: string }[] = [
@@ -19,6 +19,8 @@ const TIERS: { id: QualityTier; label: string }[] = [
 export function TopBar() {
   const quality = useApp((s) => s.quality)
   const setQuality = useApp((s) => s.setQuality)
+  const mode = useApp((s) => s.mode)
+  const setMode = useApp((s) => s.setMode)
   return (
     <header className="topbar">
       {/* Placeholder title: the final product name is still open. */}
@@ -27,10 +29,9 @@ export function TopBar() {
         {TABS.map((t) => (
           <button
             key={t.id}
-            className={`tab${t.active ? ' tab-active' : ''}`}
-            aria-current={t.active ? 'page' : undefined}
-            aria-disabled={!t.active || undefined}
-            title={t.active ? undefined : 'Coming in a later phase'}
+            className={`tab${mode === t.id ? ' tab-active' : ''}`}
+            aria-current={mode === t.id ? 'page' : undefined}
+            onClick={() => setMode(t.id)}
           >
             {t.label}
           </button>

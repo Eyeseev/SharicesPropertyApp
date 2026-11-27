@@ -1,0 +1,337 @@
+[
+  {
+    "id": "aerial-1924",
+    "date": {
+      "exact": "1924",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 2,
+    "scope": "property",
+    "title": "Aerial: no house on the lot",
+    "detail": "The 1924 aerial shows an unpaved road junction and open farmland character; no building on the lot.",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S21"
+    ],
+    "photoIds": [
+      "aerial-1924"
+    ]
+  },
+  {
+    "id": "tax-photo-1940s",
+    "date": {
+      "from": "1939",
+      "to": "1941",
+      "label": "Survey bulk 1939–41",
+      "approximate": true
+    },
+    "type": "imagery",
+    "importance": 3,
+    "scope": "property",
+    "title": "1940s tax photo shows a finished house",
+    "detail": "A Municipal Archives tax photo (sign “4931 - 5 Q”) shows a finished brick house matching this one: arched door in a projecting gable, stone-textured surround, brick chimney toward the SE. This conflicts with the 1945 build year. The mirror’s automated placement may be wrong, so both claims are kept.",
+    "evidence": "observed",
+    "confidence": "medium",
+    "sourceIds": [
+      "S23"
+    ],
+    "photoIds": [
+      "tax-1940s"
+    ],
+    "conflictId": "build-year"
+  },
+  {
+    "id": "built-1945",
+    "date": {
+      "exact": "1945",
+      "approximate": false
+    },
+    "type": "construction",
+    "importance": 3,
+    "scope": "property",
+    "title": "House built (city record)",
+    "detail": "House built (year built in all official/secondary records)",
+    "evidence": "verified",
+    "confidence": "medium",
+    "sourceIds": [
+      "S1",
+      "S8",
+      "S11"
+    ],
+    "photoIds": [],
+    "conflictId": "build-year"
+  },
+  {
+    "id": "aerial-1951",
+    "date": {
+      "exact": "1951",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 2,
+    "scope": "property",
+    "title": "Earliest aerial with the house",
+    "detail": "Black and white, low resolution: the roof mass and street pattern are legible, fine detail is not.",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S21"
+    ],
+    "photoIds": [
+      "aerial-1951"
+    ]
+  },
+  {
+    "id": "deed-1975",
+    "date": {
+      "exact": "1975-01-07",
+      "approximate": false
+    },
+    "type": "transfer",
+    "importance": 2,
+    "scope": "property",
+    "title": "Deed recorded, price not public",
+    "detail": "Deed recorded (ACRIS predecessor book record BK_7540080901363) with accompanying mortgage",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S3"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "tax-photo-1980s",
+    "date": {
+      "from": "1982",
+      "to": "1988",
+      "label": "Survey c. 1982–88",
+      "approximate": true
+    },
+    "type": "imagery",
+    "importance": 2,
+    "scope": "property",
+    "title": "1980s tax photo of the NW gable end",
+    "detail": "Yellow gable siding, white arched door with stone surround, silver chain-link fence around the front yard. The ground floor of the front gable reads grey and stone-textured, unlike today’s brick (unresolved).",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S22"
+    ],
+    "photoIds": [
+      "tax-1980s"
+    ],
+    "conflictId": "gable-ground-floor-material"
+  },
+  {
+    "id": "satisfaction-1994",
+    "date": {
+      "exact": "1994-03-24",
+      "approximate": false
+    },
+    "type": "finance_record",
+    "importance": 1,
+    "scope": "property",
+    "title": "Mortgage satisfaction recorded",
+    "detail": "Satisfaction of mortgage recorded (FT_4810004203181)",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S3"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "aerial-2004",
+    "date": {
+      "exact": "2004",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 2,
+    "scope": "property",
+    "title": "Extension visible by 2004",
+    "detail": "A pale segment at the SE end of the house matches the extension; a small dark roof at the SE rear is consistent with the garage (partly tree-covered). Both are certain by Aug 2012.",
+    "evidence": "observed",
+    "confidence": "medium",
+    "sourceIds": [
+      "S21"
+    ],
+    "photoIds": [
+      "aerial-2004"
+    ]
+  },
+  {
+    "id": "extension",
+    "date": {
+      "to": "2012-08",
+      "label": "Before Aug 2012; exact date unknown",
+      "approximate": true
+    },
+    "type": "addition",
+    "importance": 2,
+    "scope": "property",
+    "title": "Single-storey SE extension",
+    "detail": "Single-storey white extension at SE end of house present in every Street View set from Aug 2012 onward; PLUTO ext code EG records an extension but yearalter1/yearalter2 are 0",
+    "evidence": "historical_approximation",
+    "confidence": "medium",
+    "sourceIds": [
+      "S1",
+      "S9"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "sv-2012-08",
+    "date": {
+      "exact": "2012-08",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 1,
+    "scope": "property",
+    "title": "Street View: silver chain-link fence",
+    "detail": "Street View: silver/galvanised chain-link fence around both frontages; detached white garage clear; TV antenna not noted at this viewpoint",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S9"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "sv-2015-09",
+    "date": {
+      "exact": "2015-09",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 1,
+    "scope": "property",
+    "title": "Street View: no front fence",
+    "detail": "Street View: no front/side fence; TV antenna on roof; white detached garage visible",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S9"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "sv-2017-2018",
+    "date": {
+      "from": "2017-11",
+      "to": "2018-07",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 1,
+    "scope": "property",
+    "title": "Street View: small red maple in front yard",
+    "detail": "Street View: no front fence; low rusty side fence to neighbour driveway only; small dark-red Japanese maple in front yard",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S9"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "sale-2021",
+    "date": {
+      "exact": "2021-03-08",
+      "approximate": false
+    },
+    "type": "transfer",
+    "importance": 3,
+    "scope": "property",
+    "title": "Recorded sale, $569,000",
+    "detail": "Recorded sale $569000; deed 2021030900225001 recorded 2021-03-11 with mortgage 2021030900225002",
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S3",
+      "S8"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "black-fence",
+    "date": {
+      "from": "2022-11",
+      "to": "2024-10",
+      "label": "Between Nov 2022 and Oct 2024",
+      "approximate": true
+    },
+    "type": "exterior_change",
+    "importance": 2,
+    "scope": "property",
+    "title": "Black chain-link fence installed",
+    "detail": "Black chain-link fence installed around both street frontages - exact date unknown; bracketed by Street View",
+    "evidence": "historical_approximation",
+    "confidence": "medium",
+    "sourceIds": [
+      "S9"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "sv-2022-11",
+    "date": {
+      "exact": "2022-11",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 1,
+    "scope": "property",
+    "title": "Street View: still no front fence",
+    "detail": "Street View: still no front fence; front maple fuller/red",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S9"
+    ],
+    "photoIds": []
+  },
+  {
+    "id": "sv-2024-10",
+    "date": {
+      "exact": "2024-10",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 1,
+    "scope": "property",
+    "title": "Street View: black fence present",
+    "detail": "Street View (250th St + corner): black fence present; best combined front+side view",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S9"
+    ],
+    "photoIds": [
+      "sv-2024-10"
+    ]
+  },
+  {
+    "id": "sv-2026-05",
+    "date": {
+      "exact": "2026-05",
+      "approximate": false
+    },
+    "type": "imagery",
+    "importance": 1,
+    "scope": "property",
+    "title": "Street View: white vinyl rear fence",
+    "detail": "Street View (139th Ave): latest imagery found; black fence on 139th side; white vinyl rear fence + red patio umbrella visible at rear (first clear sighting - may predate)",
+    "evidence": "observed",
+    "confidence": "high",
+    "sourceIds": [
+      "S9"
+    ],
+    "photoIds": [
+      "sv-2026-05"
+    ]
+  }
+]

@@ -1,10 +1,14 @@
 import { z } from 'zod'
 
-/** How we know a value. Shown to the user as a badge on every value. */
+/**
+ * How we know a value. Shown to the user as a badge on every value.
+ * `reported` = a government figure relayed by a secondary source (not yet checked at the source).
+ */
 export const Evidence = z.enum([
   'verified',
   'observed',
   'owner_provided',
+  'reported',
   'estimated',
   'derived_approximate',
   'historical_approximation',
@@ -174,3 +178,122 @@ export const Footprints = z.object({
   footprints: z.array(FootprintRecord),
 })
 export type Footprints = z.infer<typeof Footprints>
+
+// ---------------------------------------------------------------------------------------------
+// Phase 0.3: living database (TECHNICAL_ARCHITECTURE §7.2)
+// ---------------------------------------------------------------------------------------------
+
+export const Confidence = z.enum(['high', 'medium', 'low'])
+export type Confidence = z.infer<typeof Confidence>
+
+const Id = z.string().regex(/^[a-z0-9][a-z0-9-]*$/)
+const SourceIds = z.array(z.string().regex(/^S\d+$/)).min(1)
+
+export const Fact = z.object({
+  id: Id,
+  category: z.enum(['identity', 'parcel', 'building', 'environment', 'context']),
+  field: z.string().min(1),
+  /** Text shown to the user. `null` means the value is unknown (shown as "Unknown"). */
+  value: z.string().nullable(),
+  unit: z.string().optional(),
+  effective: DateSpec.optional(),
+  evidence: Evidence,
+  confidence: Confidence,
+  sourceIds: SourceIds,
+  notes: z.string().optional(),
+  conflictId: Id.optional(),
+})
+export type Fact = z.infer<typeof Fact>
+
+export const FINANCIAL_KINDS = [
+  'recorded_sale',
+  'dof_market_value',
+  'assessed_value',
+  'taxable_value',
+  'property_tax',
+  'avm_estimate',
+] as const
+export const FinancialKind = z.enum(FINANCIAL_KINDS)
+export type FinancialKind = z.infer<typeof FinancialKind>
+
+export const FinancialEntry = z.object({
+  id: Id,
+  kind: FinancialKind,
+  /** Tax years look like "2025/26". Sales and estimates use `date`. */
+  taxYear: z.string().regex(/^\d{4}\/\d{2}$/).optional(),
+  date: DateSpec.optional(),
+  /** `null` = amount not known (for example the 1975 deed price). */
+  amountUsd: z.number().nullable(),
+  evidence: Evidence,
+  confidence: Confidence,
+  sourceIds: SourceIds,
+  notes: z.string().optional(),
+  conflictId: Id.optional(),
+})
+export type FinancialEntry = z.infer<typeof FinancialEntry>
+
+export const CHRONICLE_TYPES = [
+  'construction',
+  'transfer',
+  'finance_record',
+  'imagery',
+  'exterior_change',
+  'addition',
+  'permit',
+  'damage',
+  'news',
+  'weather',
+  'context',
+] as const
+export const ChronicleType = z.enum(CHRONICLE_TYPES)
+export type ChronicleType = z.infer<typeof ChronicleType>
+
+export const ChronicleEvent = z.object({
+  id: Id,
+  date: DateSpec,
+  type: ChronicleType,
+  importance: z.union([z.literal(1), z.literal(2), z.literal(3)]),
+  scope: z.enum(['property', 'neighbourhood']),
+  title: z.string().min(1),
+  detail: z.string().min(1),
+  evidence: Evidence,
+  confidence: Confidence,
+  sourceIds: SourceIds,
+  photoIds: z.array(Id).default([]),
+  conflictId: Id.optional(),
+})
+export type ChronicleEvent = z.infer<typeof ChronicleEvent>
+
+export const Viewpoint = z.enum(['front', 'side_139th', 'side_250th', 'rear', 'aerial', 'other'])
+export type Viewpoint = z.infer<typeof Viewpoint>
+
+export const Photo = z
+  .object({
+    id: Id,
+    date: DateSpec,
+    viewpoint: Viewpoint,
+    title: z.string().min(1),
+    caption: z.string().optional(),
+    credit: z.string().optional(),
+    sourceId: z.string().regex(/^S\d+$/),
+    rights: Rights,
+    storage: z.enum(['stored', 'link_only']),
+    /** Repo-relative path of a stored file. Served only by /api/photos/[id] after the session check. */
+    file: z.string().optional(),
+    /** Outbound link for link-only items (never embedded). */
+    url: z.string().url().optional(),
+    evidence: Evidence,
+  })
+  .refine((p) => (p.storage === 'stored' ? !!p.file && !p.url : !!p.url && !p.file), {
+    message: 'stored photos need `file` (and no url); link-only photos need `url` (and no file)',
+  })
+export type Photo = z.infer<typeof Photo>
+
+export const Conflict = z.object({
+  id: Id,
+  topic: z.string().min(1),
+  statements: z.array(z.object({ value: z.string(), sourceId: z.string().regex(/^S\d+$/) })).min(1),
+  status: z.enum(['unresolved', 'resolved']),
+  notes: z.string().min(1),
+})
+export type Conflict = z.infer<typeof Conflict>

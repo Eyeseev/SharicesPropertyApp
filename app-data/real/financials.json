@@ -1,0 +1,605 @@
+[
+  {
+    "id": "market-2016-17",
+    "kind": "dof_market_value",
+    "taxYear": "2016/17",
+    "amountUsd": 389000,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price. Secondary aggregator of DOF data"
+  },
+  {
+    "id": "assessed-2016-17",
+    "kind": "assessed_value",
+    "taxYear": "2016/17",
+    "amountUsd": 23340,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "Secondary aggregator of DOF data"
+  },
+  {
+    "id": "taxable-2016-17",
+    "kind": "taxable_value",
+    "taxYear": "2016/17",
+    "amountUsd": 23340,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "Secondary aggregator of DOF data"
+  },
+  {
+    "id": "tax-2016-17",
+    "kind": "property_tax",
+    "taxYear": "2016/17",
+    "amountUsd": 4666,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "Tax rate 19.991%. Secondary aggregator of DOF data"
+  },
+  {
+    "id": "market-2017-18",
+    "kind": "dof_market_value",
+    "taxYear": "2017/18",
+    "amountUsd": 412000,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price."
+  },
+  {
+    "id": "assessed-2017-18",
+    "kind": "assessed_value",
+    "taxYear": "2017/18",
+    "amountUsd": 24720,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ]
+  },
+  {
+    "id": "taxable-2017-18",
+    "kind": "taxable_value",
+    "taxYear": "2017/18",
+    "amountUsd": 23688,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ]
+  },
+  {
+    "id": "tax-2017-18",
+    "kind": "property_tax",
+    "taxYear": "2017/18",
+    "amountUsd": 4829,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "Tax rate 20.385%."
+  },
+  {
+    "id": "market-2018-19",
+    "kind": "dof_market_value",
+    "taxYear": "2018/19",
+    "amountUsd": 467000,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price."
+  },
+  {
+    "id": "assessed-2018-19",
+    "kind": "assessed_value",
+    "taxYear": "2018/19",
+    "amountUsd": 28020,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ]
+  },
+  {
+    "id": "taxable-2018-19",
+    "kind": "taxable_value",
+    "taxYear": "2018/19",
+    "amountUsd": 23688,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ]
+  },
+  {
+    "id": "tax-2018-19",
+    "kind": "property_tax",
+    "taxYear": "2018/19",
+    "amountUsd": 4955,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S19",
+      "S8"
+    ],
+    "notes": "Tax rate 20.919%."
+  },
+  {
+    "id": "market-2019-20",
+    "kind": "dof_market_value",
+    "taxYear": "2019/20",
+    "amountUsd": 483000,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price."
+  },
+  {
+    "id": "assessed-2019-20",
+    "kind": "assessed_value",
+    "taxYear": "2019/20",
+    "amountUsd": 28980,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "taxable-2019-20",
+    "kind": "taxable_value",
+    "taxYear": "2019/20",
+    "amountUsd": 25108,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "tax-2019-20",
+    "kind": "property_tax",
+    "taxYear": "2019/20",
+    "amountUsd": 5315,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Tax rate 21.167%."
+  },
+  {
+    "id": "market-2020-21",
+    "kind": "dof_market_value",
+    "taxYear": "2020/21",
+    "amountUsd": 564000,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price."
+  },
+  {
+    "id": "assessed-2020-21",
+    "kind": "assessed_value",
+    "taxYear": "2020/21",
+    "amountUsd": 33840,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "taxable-2020-21",
+    "kind": "taxable_value",
+    "taxYear": "2020/21",
+    "amountUsd": 26614,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "tax-2020-21",
+    "kind": "property_tax",
+    "taxYear": "2020/21",
+    "amountUsd": 5601,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Tax rate 21.045%."
+  },
+  {
+    "id": "market-2021-22",
+    "kind": "dof_market_value",
+    "taxYear": "2021/22",
+    "amountUsd": 576000,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price."
+  },
+  {
+    "id": "assessed-2021-22",
+    "kind": "assessed_value",
+    "taxYear": "2021/22",
+    "amountUsd": 34560,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "taxable-2021-22",
+    "kind": "taxable_value",
+    "taxYear": "2021/22",
+    "amountUsd": 28008,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "tax-2021-22",
+    "kind": "property_tax",
+    "taxYear": "2021/22",
+    "amountUsd": 5591,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Tax rate 19.963%."
+  },
+  {
+    "id": "market-2022-23",
+    "kind": "dof_market_value",
+    "taxYear": "2022/23",
+    "amountUsd": 591000,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price."
+  },
+  {
+    "id": "assessed-2022-23",
+    "kind": "assessed_value",
+    "taxYear": "2022/23",
+    "amountUsd": 35460,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "taxable-2022-23",
+    "kind": "taxable_value",
+    "taxYear": "2022/23",
+    "amountUsd": 28426,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "tax-2022-23",
+    "kind": "property_tax",
+    "taxYear": "2022/23",
+    "amountUsd": 5773,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Tax rate 20.309%."
+  },
+  {
+    "id": "market-2023-24",
+    "kind": "dof_market_value",
+    "taxYear": "2023/24",
+    "amountUsd": 646000,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price. PLUTO 26v3 assesstot 38760 matches this year"
+  },
+  {
+    "id": "assessed-2023-24",
+    "kind": "assessed_value",
+    "taxYear": "2023/24",
+    "amountUsd": 38760,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "PLUTO 26v3 assesstot 38760 matches this year"
+  },
+  {
+    "id": "taxable-2023-24",
+    "kind": "taxable_value",
+    "taxYear": "2023/24",
+    "amountUsd": 28426,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "PLUTO 26v3 assesstot 38760 matches this year"
+  },
+  {
+    "id": "tax-2023-24",
+    "kind": "property_tax",
+    "taxYear": "2023/24",
+    "amountUsd": 5709,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Tax rate 20.085%. PLUTO 26v3 assesstot 38760 matches this year"
+  },
+  {
+    "id": "market-2024-25",
+    "kind": "dof_market_value",
+    "taxYear": "2024/25",
+    "amountUsd": 613000,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price."
+  },
+  {
+    "id": "assessed-2024-25",
+    "kind": "assessed_value",
+    "taxYear": "2024/25",
+    "amountUsd": 36780,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "taxable-2024-25",
+    "kind": "taxable_value",
+    "taxYear": "2024/25",
+    "amountUsd": 30130,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ]
+  },
+  {
+    "id": "tax-2024-25",
+    "kind": "property_tax",
+    "taxYear": "2024/25",
+    "amountUsd": 6052,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Tax rate 20.085%."
+  },
+  {
+    "id": "market-2025-26",
+    "kind": "dof_market_value",
+    "taxYear": "2025/26",
+    "amountUsd": 659000,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "City “market value” used for assessment; not an appraisal or a sale price. Header on same page also states current tax 6669 labelled 2026-2027 - see conflict log"
+  },
+  {
+    "id": "assessed-2025-26",
+    "kind": "assessed_value",
+    "taxYear": "2025/26",
+    "amountUsd": 39540,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Header on same page also states current tax 6669 labelled 2026-2027 - see conflict log"
+  },
+  {
+    "id": "taxable-2025-26",
+    "kind": "taxable_value",
+    "taxYear": "2025/26",
+    "amountUsd": 31937,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Header on same page also states current tax 6669 labelled 2026-2027 - see conflict log"
+  },
+  {
+    "id": "tax-2025-26",
+    "kind": "property_tax",
+    "taxYear": "2025/26",
+    "amountUsd": 6337,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Tax rate 19.843%. Header on same page also states current tax 6669 labelled 2026-2027 - see conflict log",
+    "conflictId": "tax-6669-label"
+  },
+  {
+    "id": "tax-2026-27",
+    "kind": "property_tax",
+    "taxYear": "2026/27",
+    "amountUsd": 6669,
+    "evidence": "reported",
+    "confidence": "medium",
+    "sourceIds": [
+      "S8"
+    ],
+    "notes": "Resolved by reasoning: the $6,669 figure is the 2026/27 tax, not 2025/26 (medium-high confidence).",
+    "conflictId": "tax-6669-label"
+  },
+  {
+    "id": "sale-2021-03-08",
+    "kind": "recorded_sale",
+    "date": {
+      "exact": "2021-03-08",
+      "approximate": false
+    },
+    "amountUsd": 569000,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S3",
+      "S8"
+    ],
+    "notes": "Deed 2021030900225001, recorded 2021-03-11."
+  },
+  {
+    "id": "deed-1975-01-07",
+    "kind": "recorded_sale",
+    "date": {
+      "exact": "1975-01-07",
+      "approximate": false
+    },
+    "amountUsd": null,
+    "evidence": "verified",
+    "confidence": "high",
+    "sourceIds": [
+      "S3"
+    ],
+    "notes": "Deed BK_7540080901363 recorded; the price is not in the public record."
+  },
+  {
+    "id": "avm-1",
+    "kind": "avm_estimate",
+    "date": {
+      "exact": "2026",
+      "label": "crawl ~134 days before 2026-11-26",
+      "approximate": true
+    },
+    "amountUsd": 641195,
+    "evidence": "estimated",
+    "confidence": "low",
+    "sourceIds": [
+      "S12"
+    ],
+    "notes": "RealtyTrac estimate. Automated estimate from an aggregator crawl; not a sale or an appraisal."
+  },
+  {
+    "id": "avm-2",
+    "kind": "avm_estimate",
+    "date": {
+      "exact": "2026",
+      "label": "crawl ~294 days before 2026-11-26",
+      "approximate": true
+    },
+    "amountUsd": 667000,
+    "evidence": "estimated",
+    "confidence": "low",
+    "sourceIds": [
+      "S12"
+    ],
+    "notes": "PropertyReach estimate. Automated estimate from an aggregator crawl; not a sale or an appraisal."
+  },
+  {
+    "id": "avm-3",
+    "kind": "avm_estimate",
+    "date": {
+      "exact": "2026",
+      "label": "2026 crawls, dates vary",
+      "approximate": true
+    },
+    "amountUsd": 682000,
+    "evidence": "estimated",
+    "confidence": "low",
+    "sourceIds": [
+      "S12"
+    ],
+    "notes": "Highrises / RealEstimate (nearby-listing tables). Automated estimate from an aggregator crawl; not a sale or an appraisal."
+  },
+  {
+    "id": "avm-4",
+    "kind": "avm_estimate",
+    "date": {
+      "exact": "2026",
+      "label": "crawl 10 days before 2026-11-26",
+      "approximate": true
+    },
+    "amountUsd": 707100,
+    "evidence": "estimated",
+    "confidence": "low",
+    "sourceIds": [
+      "S12"
+    ],
+    "notes": "Highrises nearby table (3bd/1ba basis). Automated estimate from an aggregator crawl; not a sale or an appraisal."
+  },
+  {
+    "id": "avm-5",
+    "kind": "avm_estimate",
+    "date": {
+      "exact": "2026",
+      "label": "2026 crawls, dates vary",
+      "approximate": true
+    },
+    "amountUsd": 740000,
+    "evidence": "estimated",
+    "confidence": "low",
+    "sourceIds": [
+      "S12"
+    ],
+    "notes": "Highrises/HomeFinder nearby tables. Automated estimate from an aggregator crawl; not a sale or an appraisal."
+  }
+]
