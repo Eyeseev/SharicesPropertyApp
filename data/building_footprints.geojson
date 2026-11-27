@@ -1,0 +1,108 @@
+{
+  "type": "FeatureCollection",
+  "name": "138-37 250th St building footprints",
+  "source": "NYC Open Data Building Footprints (5zhs-2jue), query mappluto_bbl=4136180005",
+  "retrieved": "2026-11-26",
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -73.73043308849,
+                40.662859006791
+              ],
+              [
+                -73.730505069364,
+                40.662821689475
+              ],
+              [
+                -73.730607193039,
+                40.662935917481
+              ],
+              [
+                -73.730535212103,
+                40.66297323396
+              ],
+              [
+                -73.73043308849,
+                40.662859006791
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "bin": "4289397",
+        "base_bbl": "4136180005",
+        "role": "main house",
+        "feature_code": "2100",
+        "construction_year": 1945,
+        "height_roof_ft": 21.679,
+        "ground_elevation_ft": 16,
+        "geom_source": "Photogrammetric",
+        "last_edited": "2017-08-22T18:38:15.000Z",
+        "computed_sides_ft": [
+          24.2,
+          50.5
+        ],
+        "note": "Photogrammetric roof outline; computed side lengths from polygon coordinates (local projection). Longer than PLUTO's 22x42 ft wall dimensions - outline includes eaves and the SE extension merged into one rectangle.",
+        "source_dataset": "NYC Building Footprints, NYC Open Data 5zhs-2jue (OTI)",
+        "retrieved": "2026-11-26"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": {
+        "type": "MultiPolygon",
+        "coordinates": [
+          [
+            [
+              [
+                -73.73039756958,
+                40.662786301065
+              ],
+              [
+                -73.730455424196,
+                40.66275671586
+              ],
+              [
+                -73.730475949308,
+                40.662779990181
+              ],
+              [
+                -73.730418094681,
+                40.662809575396
+              ],
+              [
+                -73.73039756958,
+                40.662786301065
+              ]
+            ]
+          ]
+        ]
+      },
+      "properties": {
+        "bin": "4612494",
+        "base_bbl": "4136180005",
+        "role": "detached garage",
+        "feature_code": "5110",
+        "construction_year": 1945,
+        "height_roof_ft": 11.4864,
+        "ground_elevation_ft": 16,
+        "geom_source": "Photogrammetric",
+        "last_edited": "2017-08-17T16:33:33.000Z",
+        "computed_sides_ft": [
+          19.4,
+          10.2
+        ],
+        "note": "Single-car garage outline, approx 10 x 19-20 ft.",
+        "source_dataset": "NYC Building Footprints, NYC Open Data 5zhs-2jue (OTI)",
+        "retrieved": "2026-11-26"
+      }
+    }
+  ]
+}

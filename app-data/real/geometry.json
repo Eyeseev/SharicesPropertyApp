@@ -1,0 +1,667 @@
+{
+  "version": 1,
+  "units": "ft",
+  "frame": {
+    "originLat": 40.6628678,
+    "originLon": -73.7305241,
+    "longAxisBearingDeg": 145.8,
+    "note": "Lot frame: s = distance toward SE along the long axis, t = distance toward NE across the lot, origin = PLUTO point. NW short end (s = -50) faces 250th Street; SW long side (t = -25) faces 139th Avenue; NE long side (t = +25) is the interior lot line shared with 138-33. Frontage reading is the working interpretation of a wording conflict in the research (CREATIVE_DIRECTION §5); evidence: observed, to confirm with owner photos."
+  },
+  "objects": [
+    {
+      "id": "house",
+      "label": "House",
+      "evidence": "verified",
+      "sourceIds": ["S1", "S16", "S9"],
+      "facts": [
+        { "label": "Walls", "value": "22 × 42 ft", "evidence": "verified" },
+        { "label": "Gross area", "value": "1,052 sq ft", "evidence": "verified" },
+        { "label": "Storeys", "value": "1.5 (Cape Cod)", "evidence": "verified" },
+        { "label": "Built", "value": "1945", "evidence": "verified" },
+        { "label": "Eave height", "value": "≈10 ft", "evidence": "estimated" }
+      ],
+      "note": "Brick ground floor, cream siding in the gables (observed). Basement present."
+    },
+    {
+      "id": "roof",
+      "label": "Roof",
+      "evidence": "observed",
+      "sourceIds": ["S16", "S9", "S10"],
+      "facts": [
+        { "label": "Max height", "value": "21.7 ft", "evidence": "verified" },
+        { "label": "Form", "value": "Steep dark NW gable + lower pale main roof", "evidence": "observed" },
+        { "label": "Pitches", "value": "≈47° NW / ≈30° main", "evidence": "estimated" },
+        { "label": "Dormers", "value": "None", "evidence": "observed" }
+      ]
+    },
+    {
+      "id": "chimney",
+      "label": "Chimney",
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "facts": [
+        { "label": "Count", "value": "One, red brick", "evidence": "observed" },
+        { "label": "Position", "value": "Toward the SE, main roof", "evidence": "estimated" }
+      ]
+    },
+    {
+      "id": "front-door",
+      "label": "Front door",
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "facts": [
+        { "label": "Location", "value": "NW gable end, facing the street corner", "evidence": "observed" },
+        { "label": "Style", "value": "White, arched, oval glass, stone surround", "evidence": "observed" },
+        { "label": "Porch", "value": "Small gable porch roof; brick-red steps, black railings", "evidence": "observed" },
+        { "label": "Size", "value": "≈3 × 6.8 ft", "evidence": "estimated" }
+      ]
+    },
+    {
+      "id": "extension",
+      "label": "SE extension",
+      "evidence": "observed",
+      "sourceIds": ["S1", "S9", "S16"],
+      "facts": [
+        { "label": "Form", "value": "Single storey, white", "evidence": "observed" },
+        { "label": "Length", "value": "≈6.9 ft (inferred from roof outline)", "evidence": "estimated" },
+        { "label": "Width / height", "value": "≈22 ft / ≈9 ft", "evidence": "estimated" },
+        { "label": "Built", "value": "Unknown (before Aug 2012)", "evidence": "unknown" }
+      ]
+    },
+    {
+      "id": "garage",
+      "label": "Detached garage",
+      "evidence": "verified",
+      "sourceIds": ["S16", "S1", "S9"],
+      "facts": [
+        { "label": "Outline", "value": "19.3 × 10.2 ft", "evidence": "verified" },
+        { "label": "Roof height", "value": "11.5 ft", "evidence": "verified" },
+        { "label": "Walls / door", "value": "White frame, white single-car door", "evidence": "observed" },
+        { "label": "Door side", "value": "SW, facing 139th Ave", "evidence": "derived_approximate" }
+      ]
+    },
+    {
+      "id": "driveway",
+      "label": "Driveway and pad",
+      "evidence": "observed",
+      "sourceIds": ["S9", "S10"],
+      "facts": [
+        { "label": "Entry", "value": "From 139th Ave at the SE end", "evidence": "observed" },
+        { "label": "Surface", "value": "Light concrete", "evidence": "observed" },
+        { "label": "Width / pad size", "value": "≈12 ft / ≈15 × 18 ft", "evidence": "estimated" },
+        { "label": "250th St driveway", "value": "None", "evidence": "observed" }
+      ]
+    },
+    {
+      "id": "fence-front",
+      "label": "Front fence",
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "facts": [
+        { "label": "Type", "value": "Black chain-link, both frontages, gate on 250th St", "evidence": "observed" },
+        { "label": "Height", "value": "≈4 ft", "evidence": "estimated" },
+        { "label": "Installed", "value": "Between Nov 2022 and Oct 2024", "evidence": "historical_approximation" }
+      ]
+    },
+    {
+      "id": "fence-rear",
+      "label": "Rear fence",
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "facts": [
+        { "label": "Type", "value": "White vinyl section", "evidence": "observed" },
+        { "label": "Extent / height", "value": "≈17 ft run / ≈6 ft", "evidence": "estimated" },
+        { "label": "First seen", "value": "May 2026", "evidence": "observed" }
+      ]
+    },
+    {
+      "id": "maple",
+      "label": "Red Japanese maple",
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "facts": [
+        { "label": "Location", "value": "Front yard (NW)", "evidence": "observed" },
+        { "label": "Position / size", "value": "Approximate", "evidence": "estimated" }
+      ]
+    },
+    {
+      "id": "parcel",
+      "label": "Parcel",
+      "evidence": "derived_approximate",
+      "sourceIds": ["S1", "S16"],
+      "facts": [
+        { "label": "Size", "value": "50 × 100 ft, 5,000 sq ft, corner lot", "evidence": "verified" },
+        { "label": "Position", "value": "Approximate (official tax-lot polygon not yet retrieved)", "evidence": "derived_approximate" },
+        { "label": "Elevation", "value": "≈16 ft, flat", "evidence": "verified" }
+      ],
+      "note": "Dimensions verified, position approximate (decision D5)."
+    }
+  ],
+  "elements": [
+    {
+      "id": "parcel",
+      "kind": "parcel",
+      "objectId": "parcel",
+      "params": {
+        "sMin": { "value": -50, "unit": "ft", "evidence": "derived_approximate" },
+        "sMax": { "value": 50, "unit": "ft", "evidence": "derived_approximate" },
+        "tMin": { "value": -25, "unit": "ft", "evidence": "derived_approximate" },
+        "tMax": { "value": 25, "unit": "ft", "evidence": "derived_approximate" },
+        "lotFront": { "value": 50, "unit": "ft", "evidence": "verified" },
+        "lotDepth": { "value": 100, "unit": "ft", "evidence": "verified" },
+        "platformThickness": { "value": 0.6, "unit": "ft", "evidence": "estimated", "note": "Display only: miniature platform edge, not a property dimension." }
+      },
+      "evidence": "derived_approximate",
+      "sourceIds": ["S1", "S16"],
+      "notes": "Decision D5: 50 × 100 ft rectangle (dimensions verified, PLUTO) centred on the PLUTO point and aligned to the house axis; position assumes the PLUTO point lies near the lot centre. Sanity check against the footprints: front yard ≈16.4 ft (s -50 to house outline -33.6), SW side lawn ≈19.9 ft (t -25 to -5.1), NE strip ≈5.9 ft (19.1 to 25), rear margin ≈5.7 ft behind the garage (44.3 to 50). Matches the observed layout. Replace when the official tax-lot polygon is retrieved."
+    },
+    {
+      "id": "house-walls",
+      "kind": "house",
+      "objectId": "house",
+      "params": {
+        "sMin": { "value": -32.5, "unit": "ft", "evidence": "derived_approximate", "note": "Roof outline NW edge -33.6 plus ≈1.1 ft eave." },
+        "length": { "value": 42, "unit": "ft", "evidence": "verified" },
+        "width": { "value": 22, "unit": "ft", "evidence": "verified" },
+        "tCenter": { "value": 7.0, "unit": "ft", "evidence": "derived_approximate", "note": "Centre of the roof outline t range (-5.1 to 19.1)." },
+        "eaveHeight": { "value": 10, "unit": "ft", "evidence": "estimated", "note": "Not in any record; brick ground floor over a raised basement." },
+        "basementBandHeight": { "value": 2.5, "unit": "ft", "evidence": "estimated", "note": "Height of the first floor above grade; sets the door sill and basement-window band." },
+        "wallMaterial": { "value": "brick-red-brown", "evidence": "observed" },
+        "trimColor": { "value": "white", "evidence": "observed" }
+      },
+      "evidence": "verified",
+      "sourceIds": ["S1", "S16", "S9"],
+      "notes": "PLUTO walls 22 × 42 ft (verified), placed inside the official roof outline with ≈1.1 ft overhang per side (placement derived). The outline's extra length to the SE is the extension (see extension). Red-brown brick on all sides (observed)."
+    },
+    {
+      "id": "roof-nw",
+      "kind": "roof-section",
+      "objectId": "roof",
+      "params": {
+        "sMin": { "value": -32.5, "unit": "ft", "evidence": "derived_approximate" },
+        "sMax": { "value": -16.5, "unit": "ft", "evidence": "estimated", "note": "Length of the steep front section (16 ft) is not recorded; the main section is described as larger in plan." },
+        "ridgeHeight": { "value": 21.68, "unit": "ft", "evidence": "verified", "note": "Max roof height, NYC Building Footprints." },
+        "pitchDeg": { "value": 46.7, "unit": "deg", "evidence": "estimated", "note": "Derived from verified ridge height, estimated 10 ft eave and 11 ft half-width." },
+        "overhang": { "value": 1.1, "unit": "ft", "evidence": "derived_approximate" },
+        "color": { "value": "shingle-dark", "evidence": "observed", "note": "Dark grey/brown asphalt shingle." },
+        "gableSiding": { "value": "cream", "evidence": "observed" },
+        "gableNW": { "value": true, "evidence": "observed", "note": "Gable end faces NW toward the street corner." }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S16", "S9", "S10"],
+      "notes": "Steep symmetric gable, ridge along s. Must be steeper than the main SE roof. No dormers (observed absence)."
+    },
+    {
+      "id": "roof-se",
+      "kind": "roof-section",
+      "objectId": "roof",
+      "params": {
+        "sMin": { "value": -16.5, "unit": "ft", "evidence": "estimated" },
+        "sMax": { "value": 9.5, "unit": "ft", "evidence": "derived_approximate" },
+        "ridgeHeight": { "value": 16.35, "unit": "ft", "evidence": "estimated", "note": "From the estimated 30° pitch; lower than the NW ridge as observed." },
+        "pitchDeg": { "value": 30, "unit": "deg", "evidence": "estimated" },
+        "overhang": { "value": 1.1, "unit": "ft", "evidence": "derived_approximate" },
+        "color": { "value": "shingle-pale", "evidence": "observed", "note": "Light/medium grey asphalt shingle." },
+        "bandColor": { "value": "reddish-brown", "evidence": "observed", "note": "Narrow band at the main roof's SE edge, seen from above." },
+        "gableSiding": { "value": "cream", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9", "S10"],
+      "notes": "Larger, visibly lower-pitch main roof over the SE section. Pitch is an estimated parameter."
+    },
+    {
+      "id": "chimney",
+      "kind": "chimney",
+      "objectId": "chimney",
+      "params": {
+        "s": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "t": { "value": 10, "unit": "ft", "evidence": "estimated" },
+        "width": { "value": 2.5, "unit": "ft", "evidence": "estimated" },
+        "depth": { "value": 2, "unit": "ft", "evidence": "estimated" },
+        "topHeight": { "value": 20, "unit": "ft", "evidence": "estimated" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Exactly one red-brick chimney toward the SE, rising through the main roof (observed). Position and size estimated."
+    },
+    {
+      "id": "front-door",
+      "kind": "door",
+      "objectId": "front-door",
+      "params": {
+        "wall": { "value": "nw", "evidence": "observed" },
+        "along": { "value": 7.0, "unit": "ft", "evidence": "observed", "note": "Centred in the NW gable end." },
+        "width": { "value": 3, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 6.8, "unit": "ft", "evidence": "estimated" },
+        "sillHeight": { "value": 2.5, "unit": "ft", "evidence": "estimated" },
+        "arched": { "value": true, "evidence": "observed" },
+        "color": { "value": "white", "evidence": "observed" },
+        "surround": { "value": "stone", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "White arched door with oval glass and stone surround, centred in the NW gable end facing the corner."
+    },
+    {
+      "id": "front-porch",
+      "kind": "porch",
+      "objectId": "front-door",
+      "params": {
+        "width": { "value": 6, "unit": "ft", "evidence": "estimated" },
+        "depth": { "value": 3.5, "unit": "ft", "evidence": "estimated" },
+        "eaveHeight": { "value": 10, "unit": "ft", "evidence": "estimated" },
+        "peakHeight": { "value": 12, "unit": "ft", "evidence": "estimated" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Small projecting gable porch roof over the door (observed). Not a full-width porch."
+    },
+    {
+      "id": "front-steps",
+      "kind": "steps",
+      "objectId": "front-door",
+      "params": {
+        "count": { "value": 4, "evidence": "estimated" },
+        "width": { "value": 5, "unit": "ft", "evidence": "estimated" },
+        "run": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "rise": { "value": 2.5, "unit": "ft", "evidence": "estimated", "note": "Equals the estimated first-floor height above grade." },
+        "color": { "value": "concrete-red-brown", "evidence": "observed" },
+        "railings": { "value": "black-metal", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Red-brown concrete steps with black metal railings (observed); step count and size estimated."
+    },
+    {
+      "id": "window-sw-1",
+      "kind": "window",
+      "objectId": "house",
+      "params": {
+        "wall": { "value": "sw", "evidence": "observed" },
+        "along": { "value": -22, "unit": "ft", "evidence": "estimated" },
+        "sillHeight": { "value": 5, "unit": "ft", "evidence": "estimated" },
+        "width": { "value": 3, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 4.5, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "double-hung", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "One of two ground-floor double-hung windows on the SW (139th Ave) wall. Position along the wall estimated."
+    },
+    {
+      "id": "window-sw-2",
+      "kind": "window",
+      "objectId": "house",
+      "params": {
+        "wall": { "value": "sw", "evidence": "observed" },
+        "along": { "value": -6, "unit": "ft", "evidence": "estimated" },
+        "sillHeight": { "value": 5, "unit": "ft", "evidence": "estimated" },
+        "width": { "value": 3, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 4.5, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "double-hung", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Second ground-floor double-hung window on the SW wall. Position estimated."
+    },
+    {
+      "id": "window-sw-basement-1",
+      "kind": "window",
+      "objectId": "house",
+      "params": {
+        "wall": { "value": "sw", "evidence": "observed" },
+        "along": { "value": -26, "unit": "ft", "evidence": "estimated" },
+        "sillHeight": { "value": 0.6, "unit": "ft", "evidence": "estimated" },
+        "width": { "value": 2, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 1.2, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "basement", "evidence": "observed" },
+        "barred": { "value": true, "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9", "S1"],
+      "notes": "Small barred basement window low on the SW wall (observed; PLUTO records a basement)."
+    },
+    {
+      "id": "window-sw-basement-2",
+      "kind": "window",
+      "objectId": "house",
+      "params": {
+        "wall": { "value": "sw", "evidence": "observed" },
+        "along": { "value": -10, "unit": "ft", "evidence": "estimated" },
+        "sillHeight": { "value": 0.6, "unit": "ft", "evidence": "estimated" },
+        "width": { "value": 2, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 1.2, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "basement", "evidence": "observed" },
+        "barred": { "value": true, "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9", "S1"],
+      "notes": "Second barred basement window on the SW wall."
+    },
+    {
+      "id": "window-ne-1",
+      "kind": "window",
+      "objectId": "house",
+      "params": {
+        "wall": { "value": "ne", "evidence": "observed" },
+        "along": { "value": -27, "unit": "ft", "evidence": "estimated", "note": "Beside the front section." },
+        "sillHeight": { "value": 5, "unit": "ft", "evidence": "estimated" },
+        "width": { "value": 3, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 4.5, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "double-hung", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "One ground-floor window on the NE wall beside the front section. The rest of the NE wall is undocumented and left blank."
+    },
+    {
+      "id": "extension",
+      "kind": "extension",
+      "objectId": "extension",
+      "params": {
+        "sMin": { "value": 9.5, "unit": "ft", "evidence": "derived_approximate", "note": "End of the 42 ft PLUTO walls." },
+        "sMax": { "value": 16.4, "unit": "ft", "evidence": "estimated", "note": "Roof outline SE edge 16.9 minus ≈0.5 ft eave. Brief's 8.5 ft (50.5 - 42) ignores the eaves; with eaves removed the inferred length is ≈6.9 ft." },
+        "tMin": { "value": -4, "unit": "ft", "evidence": "estimated", "note": "Full house width assumed: the official outline is one uniform-width rectangle." },
+        "tMax": { "value": 18, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 9, "unit": "ft", "evidence": "estimated" },
+        "roofPitchDeg": { "value": 5, "unit": "deg", "evidence": "estimated", "note": "Low, light-coloured roof (observed); pitch estimated." },
+        "color": { "value": "white", "evidence": "observed" },
+        "windowFace": { "value": "se", "evidence": "estimated", "note": "One small window (observed); face not documented." }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S1", "S9", "S16"],
+      "notes": "Single-storey white extension at the SE end (PLUTO ext code EG; visible in every image since Aug 2012). Size estimated; construction date unknown."
+    },
+    {
+      "id": "garage",
+      "kind": "garage",
+      "objectId": "garage",
+      "params": {
+        "sMin": { "value": 34.0, "unit": "ft", "evidence": "verified" },
+        "sMax": { "value": 44.3, "unit": "ft", "evidence": "verified" },
+        "tMin": { "value": -7.1, "unit": "ft", "evidence": "verified" },
+        "tMax": { "value": 12.3, "unit": "ft", "evidence": "verified" },
+        "ridgeHeight": { "value": 11.49, "unit": "ft", "evidence": "verified" },
+        "eaveHeight": { "value": 8, "unit": "ft", "evidence": "estimated" },
+        "ridgeAlong": { "value": "t", "evidence": "derived_approximate", "note": "Ridge along the 19.3 ft side, gable facing SW." },
+        "doorSide": { "value": "sw", "evidence": "derived_approximate", "note": "The 19.3 ft side runs NE–SW and the driveway enters from 139th Ave, so the door is likely on the SW end." },
+        "doorWidth": { "value": 8, "unit": "ft", "evidence": "estimated" },
+        "doorHeight": { "value": 7, "unit": "ft", "evidence": "estimated" },
+        "wallColor": { "value": "white", "evidence": "observed" },
+        "roofColor": { "value": "shingle-dark", "evidence": "observed" }
+      },
+      "evidence": "verified",
+      "sourceIds": ["S16", "S1", "S9"],
+      "notes": "Detached single-car white frame garage at the SE rear corner. Outline extents from the official footprint (projected, ±0.3 ft). Not attached, not brick."
+    },
+    {
+      "id": "driveway",
+      "kind": "slab",
+      "objectId": "driveway",
+      "params": {
+        "sMin": { "value": 33, "unit": "ft", "evidence": "estimated" },
+        "sMax": { "value": 45, "unit": "ft", "evidence": "estimated" },
+        "tMin": { "value": -25, "unit": "ft", "evidence": "observed", "note": "Enters from 139th Ave." },
+        "tMax": { "value": -7.1, "unit": "ft", "evidence": "derived_approximate", "note": "Ends at the garage door." },
+        "material": { "value": "concrete-light", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9", "S10"],
+      "notes": "Light concrete driveway from 139th Ave at the SE end running NE to the garage. Width estimated (single car). No driveway on 250th St."
+    },
+    {
+      "id": "driveway-pad",
+      "kind": "slab",
+      "objectId": "driveway",
+      "params": {
+        "sMin": { "value": 17.5, "unit": "ft", "evidence": "estimated" },
+        "sMax": { "value": 33, "unit": "ft", "evidence": "estimated" },
+        "tMin": { "value": -14, "unit": "ft", "evidence": "estimated" },
+        "tMax": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "material": { "value": "concrete-light", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9", "S10"],
+      "notes": "Wider paved pad beside the extension, in front of the garage (observed); extent estimated."
+    },
+    {
+      "id": "walkway",
+      "kind": "slab",
+      "params": {
+        "sMin": { "value": -50, "unit": "ft", "evidence": "observed" },
+        "sMax": { "value": -36.5, "unit": "ft", "evidence": "estimated", "note": "Meets the foot of the front steps." },
+        "tMin": { "value": 5.5, "unit": "ft", "evidence": "estimated" },
+        "tMax": { "value": 8.5, "unit": "ft", "evidence": "estimated" },
+        "material": { "value": "concrete-light", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Straight concrete walkway from the gate to the front steps (observed). Width estimated."
+    },
+    {
+      "id": "fence-front-250th",
+      "kind": "fence",
+      "objectId": "fence-front",
+      "params": {
+        "points": { "value": [-50, -25, -50, 5.25], "unit": "ft", "evidence": "observed", "note": "Flat list of s,t pairs. Runs from the street corner to the gate." },
+        "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "chain-link-black", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "validFrom": { "from": "2022-11", "to": "2024-10", "approximate": true, "label": "Installed between Nov 2022 and Oct 2024" },
+      "notes": "Present-day black chain-link along the 250th St (NW) frontage, corner to gate (observed Oct 2024 – May 2026)."
+    },
+    {
+      "id": "fence-front-250th-b",
+      "kind": "fence",
+      "objectId": "fence-front",
+      "params": {
+        "points": { "value": [-50, 8.75, -50, 25], "unit": "ft", "evidence": "observed" },
+        "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "chain-link-black", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "validFrom": { "from": "2022-11", "to": "2024-10", "approximate": true },
+      "notes": "Black chain-link along 250th St from the gate to the north corner."
+    },
+    {
+      "id": "fence-front-139th",
+      "kind": "fence",
+      "objectId": "fence-front",
+      "params": {
+        "points": { "value": [-50, -25, 32, -25], "unit": "ft", "evidence": "observed" },
+        "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "chain-link-black", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "validFrom": { "from": "2022-11", "to": "2024-10", "approximate": true },
+      "notes": "Black chain-link along the 139th Ave (SW) frontage up to the driveway. Opening at the driveway is estimated (no gate documented)."
+    },
+    {
+      "id": "fence-front-139th-b",
+      "kind": "fence",
+      "objectId": "fence-front",
+      "params": {
+        "points": { "value": [46, -25, 50, -25], "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "chain-link-black", "evidence": "observed" }
+      },
+      "evidence": "estimated",
+      "sourceIds": ["S9"],
+      "validFrom": { "from": "2022-11", "to": "2024-10", "approximate": true },
+      "notes": "Short section past the driveway to the rear corner; presence there is an assumption from 'encloses both frontages'."
+    },
+    {
+      "id": "gate-front",
+      "kind": "gate",
+      "objectId": "fence-front",
+      "params": {
+        "s": { "value": -50, "unit": "ft", "evidence": "observed" },
+        "t": { "value": 7, "unit": "ft", "evidence": "estimated", "note": "Described as a corner gate aligned with the walkway; placed on the 250th St frontage in line with the door." },
+        "width": { "value": 3.5, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "metal-black", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "validFrom": { "from": "2022-11", "to": "2024-10", "approximate": true },
+      "notes": "Black metal gate aligned with the front walkway. Exact position estimated."
+    },
+    {
+      "id": "fence-rear",
+      "kind": "fence",
+      "objectId": "fence-rear",
+      "params": {
+        "points": { "value": [50, -25, 50, -8], "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 6, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "vinyl-white", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "validFrom": { "exact": "2026-05", "approximate": true, "label": "First seen May 2026 (may predate)" },
+      "notes": "White vinyl section at the rear, first clearly seen May 2026 from 139th Ave. Exact run unknown, kept short; extent and height estimated."
+    },
+    {
+      "id": "fence-2012-silver",
+      "kind": "fence",
+      "params": {
+        "points": { "value": [-50, -25, -50, 25], "unit": "ft", "evidence": "historical_approximation" },
+        "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
+        "style": { "value": "chain-link-silver", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "validFrom": { "exact": "2012-08", "approximate": true, "label": "Observed Aug 2012" },
+      "validTo": { "from": "2012-08", "to": "2015-09", "approximate": true, "label": "Removed by Sep 2015" },
+      "variantOf": "fence-front-250th",
+      "render": false,
+      "notes": "Dated variant kept for schema testing only; not rendered in Phase 0.1. Silver chain-link around both frontages in Aug 2012."
+    },
+    {
+      "id": "maple",
+      "kind": "tree",
+      "objectId": "maple",
+      "params": {
+        "s": { "value": -42, "unit": "ft", "evidence": "estimated" },
+        "t": { "value": -7, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 11, "unit": "ft", "evidence": "estimated" },
+        "canopyRadius": { "value": 5, "unit": "ft", "evidence": "estimated" },
+        "species": { "value": "japanese-maple-red", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Dark-red Japanese maple in the front yard (observed 2017–2024). Small ornamental size; position approximate."
+    },
+    {
+      "id": "tree-corner-nw",
+      "kind": "tree",
+      "params": {
+        "s": { "value": -46, "unit": "ft", "evidence": "estimated" },
+        "t": { "value": -21, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 30, "unit": "ft", "evidence": "estimated" },
+        "canopyRadius": { "value": 10, "unit": "ft", "evidence": "estimated" },
+        "species": { "value": "mature-deciduous", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9", "S10"],
+      "notes": "Mature tree at the street corner (NW corner). Position approximate; may be a street tree."
+    },
+    {
+      "id": "tree-north",
+      "kind": "tree",
+      "params": {
+        "s": { "value": -46, "unit": "ft", "evidence": "estimated" },
+        "t": { "value": 21, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 28, "unit": "ft", "evidence": "estimated" },
+        "canopyRadius": { "value": 9, "unit": "ft", "evidence": "estimated" },
+        "species": { "value": "mature-deciduous", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9", "S10"],
+      "notes": "Mature tree at the north corner near 250th St. Position approximate."
+    },
+    {
+      "id": "tree-139th-a",
+      "kind": "tree",
+      "params": {
+        "s": { "value": -18, "unit": "ft", "evidence": "estimated" },
+        "t": { "value": -29, "unit": "ft", "evidence": "estimated", "note": "In the sidewalk strip, outside the lot." },
+        "height": { "value": 32, "unit": "ft", "evidence": "estimated" },
+        "canopyRadius": { "value": 10, "unit": "ft", "evidence": "estimated" },
+        "species": { "value": "mature-deciduous", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Large street/side tree along 139th Ave whose canopy overhangs the SW side. Position approximate; probably outside the lot."
+    },
+    {
+      "id": "tree-139th-b",
+      "kind": "tree",
+      "params": {
+        "s": { "value": 8, "unit": "ft", "evidence": "estimated" },
+        "t": { "value": -29, "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 30, "unit": "ft", "evidence": "estimated" },
+        "canopyRadius": { "value": 9, "unit": "ft", "evidence": "estimated" },
+        "species": { "value": "mature-deciduous", "evidence": "observed" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Second mature tree along the 139th Ave edge. Position approximate."
+    },
+    {
+      "id": "shrubs-front",
+      "kind": "shrub-row",
+      "params": {
+        "from": { "value": [-34.5, -3.5], "unit": "ft", "evidence": "estimated" },
+        "to": { "value": [-34.5, 3.5], "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 2.5, "unit": "ft", "evidence": "estimated" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Low shrubs along the house base at the front, SW of the steps."
+    },
+    {
+      "id": "shrubs-front-b",
+      "kind": "shrub-row",
+      "params": {
+        "from": { "value": [-34.5, 10.5], "unit": "ft", "evidence": "estimated" },
+        "to": { "value": [-34.5, 17.5], "unit": "ft", "evidence": "estimated" },
+        "height": { "value": 2.5, "unit": "ft", "evidence": "estimated" }
+      },
+      "evidence": "observed",
+      "sourceIds": ["S9"],
+      "notes": "Low shrubs along the house base at the front, NE of the steps."
+    },
+    {
+      "id": "context-sidewalk-250th",
+      "kind": "context",
+      "params": {
+        "sMin": { "value": -61, "unit": "ft", "evidence": "estimated" },
+        "sMax": { "value": -50, "unit": "ft", "evidence": "estimated" },
+        "tMin": { "value": -36, "unit": "ft", "evidence": "estimated" },
+        "tMax": { "value": 30, "unit": "ft", "evidence": "estimated" },
+        "material": { "value": "sidewalk", "evidence": "estimated" }
+      },
+      "evidence": "estimated",
+      "sourceIds": [],
+      "notes": "Generic sidewalk and curb strip outside the 250th St frontage. Context only, not property data."
+    },
+    {
+      "id": "context-sidewalk-139th",
+      "kind": "context",
+      "params": {
+        "sMin": { "value": -50, "unit": "ft", "evidence": "estimated" },
+        "sMax": { "value": 56, "unit": "ft", "evidence": "estimated" },
+        "tMin": { "value": -36, "unit": "ft", "evidence": "estimated" },
+        "tMax": { "value": -25, "unit": "ft", "evidence": "estimated" },
+        "material": { "value": "sidewalk", "evidence": "estimated" }
+      },
+      "evidence": "estimated",
+      "sourceIds": [],
+      "notes": "Generic sidewalk and curb strip outside the 139th Ave frontage. Context only, not property data."
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+tax_year,market_value_dof,assessed_value,taxable_amount,tax_rate_pct,property_tax,source,confidence,notes
+2016/17,389000,23340,23340,19.991,4666,PropertyShark (govt data),medium,Secondary aggregator of DOF data
+2017/18,412000,24720,23688,20.385,4829,PropertyShark (govt data),medium,
+2018/19,467000,28020,23688,20.919,4955,PropertyShark (govt data),medium,
+2019/20,483000,28980,25108,21.167,5315,PropertyShark (govt data),medium,
+2020/21,564000,33840,26614,21.045,5601,PropertyShark (govt data),medium,
+2021/22,576000,34560,28008,19.963,5591,PropertyShark (govt data),medium,
+2022/23,591000,35460,28426,20.309,5773,PropertyShark (govt data),medium,
+2023/24,646000,38760,28426,20.085,5709,PropertyShark (govt data),medium,PLUTO 26v3 assesstot 38760 matches this year
+2024/25,613000,36780,30130,20.085,6052,PropertyShark (govt data),medium,
+2025/26,659000,39540,31937,19.843,6337,PropertyShark (govt data),medium,Header on same page also states current tax 6669 labelled 2026-2027 - see conflict log
+2026/27,,,,,6669,PropertyShark header,low-medium,Labelled current property tax 2025-2026 in FAQ and 2026-2027 in header on same page - unresolved labelling conflict; amount preserved as reported

@@ -1,0 +1,338 @@
+{
+  "project": "Sharices Property App",
+  "schema_note": "Each record: value, unit, effective date/range, source, retrieval date, evidence type, confidence. Verified = official record. Estimates kept separate.",
+  "retrieval_date": "2026-11-26",
+  "address": {
+    "user_confirmed": "13837 250th Street, Rosedale, 11422, New York",
+    "queens_form": "138-37 250th Street, Rosedale, NY 11422",
+    "alternate_address_on_record": "250-01 139th Ave, Rosedale, NY 11422",
+    "confidence": "high - user-confirmed 2026-11-26 and matches PLUTO/PAD"
+  },
+  "identity": {
+    "bbl": {
+      "value": "4136180005",
+      "source": "NYC PLUTO 26v3 + NYC PAD via Geosearch",
+      "confidence": "verified"
+    },
+    "borough_block_lot": {
+      "borough": "Queens (4)",
+      "block": 13618,
+      "lot": 5
+    },
+    "bin": {
+      "value": "4289397",
+      "source": "NYC PAD via Geosearch (planninglabs.nyc)",
+      "confidence": "verified"
+    },
+    "coordinates": {
+      "lat": 40.6628678,
+      "lon": -73.7305241,
+      "source": "PLUTO 26v3",
+      "confidence": "verified"
+    },
+    "zoning": {
+      "district": "R3X",
+      "zonemap": "19d",
+      "source": "PLUTO 26v3",
+      "confidence": "verified"
+    },
+    "admin": {
+      "community_district": "413 (Queens CB13)",
+      "council_district": 31,
+      "school_district": 29,
+      "police_precinct": 116,
+      "fire_company": "E314",
+      "census_tract_2010": "656",
+      "sanborn_map": "417 039",
+      "source": "PLUTO 26v3",
+      "confidence": "verified"
+    }
+  },
+  "parcel_geometry": {
+    "lot_front_ft": {
+      "value": 50,
+      "source": "PLUTO lotfront",
+      "confidence": "verified"
+    },
+    "lot_depth_ft": {
+      "value": 100,
+      "source": "PLUTO lotdepth",
+      "confidence": "verified"
+    },
+    "lot_area_sqft": {
+      "value": 5000,
+      "source": "PLUTO lotarea; matches 50x100",
+      "confidence": "verified"
+    },
+    "lot_type": {
+      "value": "3 = corner lot",
+      "source": "PLUTO lottype; corner of 250th St & 139th Ave, two street frontages",
+      "confidence": "verified"
+    },
+    "orientation": {
+      "value": "Long axis NW-SE, parallel to 139th Ave; NW gable end faces the intersection; NE long side faces 250th St; SW long side faces 139th Ave; driveway enters from 139th Ave at SE end",
+      "source": "Google/Bing aerial visual inspection 2026-11-26",
+      "confidence": "high (visual)"
+    },
+    "elevation_ft": {
+      "value": 16.4,
+      "source": "USGS EPQS (1m raster) at PLUTO coordinates",
+      "confidence": "medium-high, point sample"
+    }
+  },
+  "building": {
+    "year_built": {
+      "value": 1945,
+      "source": "PLUTO; PropertyShark; SKYDB",
+      "confidence": "verified (consistent across 3 sources)"
+    },
+    "building_class": {
+      "value": "A2 - One Story, Permanent Living Quarter",
+      "source": "PLUTO bldgclass / PropertyShark",
+      "confidence": "verified"
+    },
+    "style_observed": {
+      "value": "1.5-storey Cape Cod / gable house",
+      "source": "Street View 2012-2026; SKYDB 1.5 floors, height 6.6 m (~21.7 ft)",
+      "confidence": "high (visual)"
+    },
+    "num_buildings_on_lot": {
+      "value": 2,
+      "source": "PLUTO numbldgs=2 (house + detached garage)",
+      "confidence": "verified"
+    },
+    "num_floors": {
+      "value": 1.5,
+      "source": "PLUTO numfloors; SKYDB",
+      "confidence": "verified"
+    },
+    "units_residential": {
+      "value": 1,
+      "source": "PLUTO unitsres",
+      "confidence": "verified"
+    },
+    "building_front_ft": {
+      "value": 22,
+      "source": "PLUTO bldgfront",
+      "confidence": "verified"
+    },
+    "building_depth_ft": {
+      "value": 42,
+      "source": "PLUTO bldgdepth",
+      "confidence": "verified"
+    },
+    "gross_building_area_sqft": {
+      "value": 1052,
+      "source": "PLUTO bldgarea/resarea",
+      "confidence": "verified",
+      "notes": "PropertyShark FAR area reads 1050 sq ft - 2 sq ft discrepancy preserved, not resolved"
+    },
+    "footprint_sqft_nominal": {
+      "value": 924,
+      "unit": "sq ft (22 x 42 rectangle)",
+      "source": "Derived from PLUTO front/depth - rectangle approximation only; aerial shows NW gable section + SE/main section + SE white extension, so true polygon differs",
+      "confidence": "estimate"
+    },
+    "construction": {
+      "value": "Frame construction; exterior wall finish Brick/Masonry (ground floor red-brown brick observed); detached frame garage",
+      "source": "PropertyShark building table (govt-derived); Street View visual",
+      "confidence": "medium-high"
+    },
+    "extension": {
+      "value": "PLUTO ext code 'EG' = extension + garage present; white single-storey SE extension visible in all Street View from Aug 2012",
+      "source": "PLUTO; Street View",
+      "confidence": "medium-high; extension date unknown - PLUTO yearalter1/2 = 0"
+    },
+    "basement": {
+      "value": "Basement present - small barred basement windows visible on 139th Ave elevation; PLUTO bsmtcode 2",
+      "source": "Street View; PLUTO",
+      "confidence": "high (visual)"
+    },
+    "beds_baths_third_party": {
+      "value": "3 bed / 1 bath",
+      "source": "PropertyReach, BatchLeads, Highrises aggregators",
+      "confidence": "low-medium - NOT in official PLUTO record; owner confirmation needed"
+    },
+    "roof_observed": {
+      "value": "Steep pitched dark grey/brown asphalt-shingle gable at NW section; larger light/medium grey lower-pitched roof over SE/main section; red-brick chimney on SE side",
+      "source": "Google satellite + Street View; Bing aerial agrees",
+      "confidence": "high (visual)"
+    },
+    "front_door_observed": {
+      "value": "White arched-top door with oval glass and stone surround, small projecting gable porch, on NW gable end facing intersection; red-brown concrete steps, black metal railings",
+      "source": "Street View Oct 2024 corner view",
+      "confidence": "high (visual)"
+    }
+  },
+  "financial": {
+    "recorded_sales": [
+      {
+        "date": "2021-03-08",
+        "price_usd": 569000,
+        "deed_doc_id": "2021030900225001",
+        "recorded": "2021-03-11",
+        "source": "ACRIS Legals (NYC Open Data) + PropertyShark",
+        "confidence": "verified"
+      },
+      {
+        "date": "1975-01-07 (recorded)",
+        "price_usd": null,
+        "deed_doc_id": "BK_7540080901363",
+        "source": "ACRIS Legals",
+        "confidence": "verified recording; price unknown / not in dataset"
+      }
+    ],
+    "other_recorded_docs": [
+      {
+        "type": "Mortgage (with 2021 deed)",
+        "doc_id": "2021030900225002",
+        "date": "2021-03-08"
+      },
+      {
+        "type": "Satisfaction of mortgage",
+        "doc_id": "FT_4810004203181",
+        "recorded": "1994-03-24"
+      },
+      {
+        "type": "Mortgage (with 1975 deed)",
+        "doc_id": "BK_7540080901365",
+        "recorded": "1975-01-07"
+      }
+    ],
+    "note": "ACRIS Legals for Block 13618 Lot 5 returns ONLY the 5 documents above. No other deeds/transfers found. Private mortgage amounts were not collected per brief.",
+    "assessments_taxes_csv": "financial_history.csv",
+    "market_estimates_NOT_sales": [
+      {
+        "value_usd": 641195,
+        "source": "RealtyTrac estimate",
+        "date": "crawl ~134 days before 2026-11-26",
+        "confidence": "low"
+      },
+      {
+        "value_usd": 667000,
+        "source": "PropertyReach estimate",
+        "date": "crawl ~294 days before 2026-11-26",
+        "confidence": "low"
+      },
+      {
+        "value_usd": 682000,
+        "source": "Highrises / RealEstimate (nearby-listing tables)",
+        "date": "2026 crawls, dates vary",
+        "confidence": "low"
+      },
+      {
+        "value_usd": 707100,
+        "source": "Highrises nearby table (3bd/1ba basis)",
+        "date": "crawl 10 days before 2026-11-26",
+        "confidence": "low"
+      },
+      {
+        "value_usd": 740000,
+        "source": "Highrises/HomeFinder nearby tables",
+        "date": "2026 crawls, dates vary",
+        "confidence": "low"
+      },
+      {
+        "value_usd": 659000,
+        "source": "NYC DOF market value for assessment, tax year 2025/26 - this is an assessment input, NOT a market appraisal",
+        "confidence": "verified as DOF figure via PropertyShark"
+      }
+    ],
+    "estimate_summary": "Third-party AVMs cluster roughly $640k-$740k with wide spread and stale crawls - treat as a low-confidence range only. Zillow Zestimate and Redfin Estimate for this exact address were NOT retrievable in free search (not indexed) - backlog."
+  },
+  "permits_history": {
+    "dob_job_filings_bis": {
+      "result": "0 records for BIN 4289397 and for Block 13618/Lot 5/Queens",
+      "source": "NYC Open Data DOB Job Application Filings (ic3t-wcy2)",
+      "retrieved": "2026-11-26",
+      "confidence": "high for that dataset's coverage"
+    },
+    "dob_violations": {
+      "result": "0 records for BIN",
+      "source": "NYC Open Data DOB Violations (3h2n-5cm9)",
+      "confidence": "high for dataset"
+    },
+    "hpd_violations": {
+      "result": "0 records for BIN",
+      "source": "NYC Open Data HPD Violations (wvxf-dwi5)",
+      "confidence": "high for dataset"
+    },
+    "propertyshark_permits": {
+      "result": "No recently recorded permits",
+      "source": "PropertyShark",
+      "confidence": "medium"
+    },
+    "dob_permit_issuance_dataset": {
+      "result": "NOT completed - query returned HTTP 429 rate limit on 2026-11-26; stopped per rate-limit rule",
+      "source": "NYC Open Data ipu4-2q9a",
+      "confidence": "unknown - backlog retry"
+    },
+    "interpretation": "No permitted work is recorded in the checked digital systems. That does NOT prove no work occurred - the SE extension and fence changes are visible in imagery with no matching digital permit record found; pre-digital / BIS microfilm records are a backlog item."
+  },
+  "environment": {
+    "fema_flood_zone": {
+      "value": "X (minimal flood hazard, outside 1% annual-chance floodplain as reported)",
+      "source": "PropertyShark FEMA layer for this parcel",
+      "confidence": "medium - secondary source; official FEMA FIRM panel confirmation is a backlog item"
+    },
+    "hurricane_evacuation_zone": {
+      "value": "4",
+      "source": "PropertyShark / NYC evacuation layer",
+      "confidence": "medium"
+    },
+    "terrain_context": {
+      "value": "Low-lying (~16 ft) former Foster's Meadow farmland/marsh near Hook Creek, draining to Jamaica Bay; Rosedale has documented neighbourhood-level chronic flooding and a major NYC sewer project - LOCAL CONTEXT ONLY, no evidence found that this specific property flooded",
+      "source": "USGS elevation; Rosedale neighbourhood histories",
+      "confidence": "context, not a property claim"
+    },
+    "walk_transit_bike": {
+      "value": "Walk Score 86, Transit 64, Bike 57",
+      "source": "Walk Score via PropertyShark",
+      "confidence": "medium"
+    },
+    "neighbourhood_context": {
+      "value": "Rosedale median sale price $740,000 (PropertyShark, crawl 2026-10/11); Queens median $765,000",
+      "source": "PropertyShark neighbourhood block",
+      "confidence": "medium, dated to crawl"
+    }
+  },
+  "conflicts_preserved": [
+    "Docs say Rhode Island; user-confirmed address is New York. Followed user address.",
+    "DOF market value: PropertyShark table 2023/24 = $646,000 with assessed $38,760, while its header 'recent assessments' pairs $646,000/$38,760 and PLUTO assesstot $38,760 matches 2023/24 - year labelling in aggregator may lag PLUTO version.",
+    "Current tax: same PropertyShark page gives $6,669 as both '2026-2027' (header) and '2025-2026' (FAQ); table's 2025/26 tax is $6,337. Amounts preserved as reported.",
+    "Building area 1,052 sq ft (PLUTO) vs 1,050 sq ft FAR area (PropertyShark).",
+    "Upper gable siding reads pale yellow (2012, 2015) vs cream/white (2022-2026) in Street View - lighting vs repaint unresolved; do NOT assert a repaint.",
+    "Stories: PLUTO/SKYDB/Street View agree 1.5; some aggregator tables garble this as '2, 2' (buildings/units fields) - 1.5 is used."
+  ],
+  "building_footprints_official": {
+    "source": "NYC Building Footprints, NYC Open Data dataset 5zhs-2jue (OTI), photogrammetric, retrieved 2026-11-26",
+    "file": "building_footprints.geojson",
+    "house": {
+      "bin": "4289397",
+      "polygon_sides_ft_computed": [
+        24.2,
+        50.5
+      ],
+      "height_roof_ft": 21.679,
+      "ground_elevation_ft": 16,
+      "construction_year": 1945,
+      "confidence": "verified polygon; side lengths computed from coordinates"
+    },
+    "garage": {
+      "bin": "4612494",
+      "polygon_sides_ft_computed": [
+        19.4,
+        10.2
+      ],
+      "height_roof_ft": 11.486,
+      "ground_elevation_ft": 16,
+      "construction_year": 1945,
+      "feature_code": "5110 garage",
+      "confidence": "verified polygon"
+    },
+    "reconciliation": "Footprint outline (24.2 x 50.5 ft) is longer/wider than PLUTO wall dims (22 x 42 ft): it is a roof outline including eaves, with the SE extension merged into the same rectangle. PLUTO's 1,052 sq ft gross area remains the official building area.",
+    "parcel_polygon": {
+      "status": "NOT retrieved - lot dimensions verified (50 x 100 ft, PLUTO) but the official tax-lot polygon (Digital Tax Map) was not extractable as a file in this session; footprints above are the verified geometry. Parcel polygon remains a backlog item, not estimated here."
+    }
+  }
+}

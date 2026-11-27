@@ -1,0 +1,138 @@
+[
+  {
+    "id": "S1",
+    "name": "NYC PLUTO 26v3 (NYC Open Data 64uk-42ks)",
+    "type": "official",
+    "url": "https://data.cityofnewyork.us/resource/64uk-42ks.json?bbl=4136180005",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "BBL, lot and building dimensions, area, zoning, year built, class, buildings, coordinates"
+  },
+  {
+    "id": "S2",
+    "name": "NYC PAD via Geosearch (Planning Labs)",
+    "type": "official",
+    "url": "https://geosearch.planninglabs.nyc/v2/search?text=138-37%20250th%20Street%20Queens%20NY%2011422",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "BIN 4289397, BBL confirmation"
+  },
+  {
+    "id": "S3",
+    "name": "ACRIS — NYC Dept. of Finance, City Register (NYC Open Data 8h5j-fqxa)",
+    "type": "official",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "Recorded documents for the lot: 2021 deed and mortgage, 1975 deed and mortgage, 1994 satisfaction"
+  },
+  {
+    "id": "S4",
+    "name": "DOB Job Filings (NYC Open Data ic3t-wcy2)",
+    "type": "official",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "0 filings"
+  },
+  {
+    "id": "S5",
+    "name": "DOB Violations (3h2n-5cm9) / HPD Violations (wvxf-dwi5)",
+    "type": "official",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "0 / 0 violations"
+  },
+  {
+    "id": "S6",
+    "name": "DOB Permit Issuance (ipu4-2q9a)",
+    "type": "official",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "Not completed (HTTP 429); backlog"
+  },
+  {
+    "id": "S7",
+    "name": "USGS EPQS elevation service",
+    "type": "official",
+    "url": "https://epqs.nationalmap.gov/v1/json?x=-73.7305241&y=40.6628678",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "Elevation 16.45 ft"
+  },
+  {
+    "id": "S8",
+    "name": "NYC DOF (via PropertyShark, secondary)",
+    "type": "secondary",
+    "url": "https://www.propertyshark.com/mason/Property/784922/138-37-250-St-Queens-NY-11422/",
+    "retrieved": "2026-11-26",
+    "rights": "link_only",
+    "established": "Sale 2021, tax table 2016/17–2025/26, flood zone X, evacuation zone 4"
+  },
+  {
+    "id": "S9",
+    "name": "Google Maps / Street View",
+    "type": "imagery",
+    "retrieved": "2026-11-26",
+    "rights": "link_only",
+    "established": "Exterior geometry and materials, dated changes 2012–2026 (observations only)"
+  },
+  {
+    "id": "S10",
+    "name": "Bing Maps aerial + 3D",
+    "type": "imagery",
+    "url": "https://www.bing.com/maps?cp=40.662934~-73.730552&lvl=20&style=h",
+    "retrieved": "2026-11-26",
+    "rights": "link_only",
+    "established": "Independent aerial confirmation (observations only)"
+  },
+  {
+    "id": "S11",
+    "name": "SKYDB building record #356933310",
+    "type": "secondary",
+    "url": "https://www.skydb.net/building/356933310/138-37-250th-street/",
+    "retrieved": "2026-11-26",
+    "rights": "link_only",
+    "established": "Height 6.6 m, 1.5 floors, 1945"
+  },
+  {
+    "id": "S12",
+    "name": "AVM aggregators (RealtyTrac, PropertyReach, Highrises, BatchLeads)",
+    "type": "avm",
+    "retrieved": "2026-11-26",
+    "rights": "link_only",
+    "established": "Low-confidence value range; 3bd/1ba claim"
+  },
+  {
+    "id": "S13",
+    "name": "NYC311 + Municipal Archives guides (tax photos)",
+    "type": "official",
+    "url": "https://portal.311.nyc.gov/article/?kanumber=KA-02939",
+    "retrieved": "2026-11-26",
+    "rights": "link_only",
+    "established": "Tax photo collections, prices, access"
+  },
+  {
+    "id": "S14",
+    "name": "NYCityMap / NYS GIS / USGS EarthExplorer aerial archives",
+    "type": "imagery",
+    "retrieved": "2026-11-26",
+    "rights": "unknown",
+    "established": "Historical aerial coverage identified (terms to verify at download)"
+  },
+  {
+    "id": "S15",
+    "name": "Rosedale neighbourhood histories",
+    "type": "context",
+    "url": "https://en.wikipedia.org/wiki/Rosedale,_Queens",
+    "retrieved": "2026-11-26",
+    "rights": "link_only",
+    "established": "Neighbourhood-level history only"
+  },
+  {
+    "id": "S16",
+    "name": "NYC Building Footprints (NYC Open Data 5zhs-2jue, OTI)",
+    "type": "official",
+    "retrieved": "2026-11-26",
+    "rights": "usable_data",
+    "established": "House and garage polygons and roof heights (data/building_footprints.geojson)"
+  }
+]

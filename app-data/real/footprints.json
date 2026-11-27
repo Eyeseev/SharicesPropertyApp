@@ -1,0 +1,92 @@
+{
+  "generatedFrom": "data/building_footprints.geojson",
+  "frame": {
+    "originLat": 40.6628678,
+    "originLon": -73.7305241,
+    "longAxisBearingDeg": 145.8
+  },
+  "footprints": [
+    {
+      "id": "footprint-house",
+      "bin": "4289397",
+      "role": "main house",
+      "heightRoofFt": 21.679,
+      "groundElevationFt": 16,
+      "cornersLot": [
+        [
+          16.83,
+          19.05
+        ],
+        [
+          16.89,
+          -5.11
+        ],
+        [
+          -33.52,
+          -5.06
+        ],
+        [
+          -33.58,
+          19.1
+        ]
+      ],
+      "extents": {
+        "sMin": -33.58,
+        "sMax": 16.89,
+        "tMin": -5.11,
+        "tMax": 19.1
+      },
+      "sidesFt": [
+        24.16,
+        50.41,
+        24.16,
+        50.41
+      ],
+      "evidence": "verified",
+      "sourceIds": [
+        "S16"
+      ]
+    },
+    {
+      "id": "footprint-garage",
+      "bin": "4612494",
+      "role": "detached garage",
+      "heightRoofFt": 11.4864,
+      "groundElevationFt": 16,
+      "cornersLot": [
+        [
+          44.32,
+          12.26
+        ],
+        [
+          44.25,
+          -7.07
+        ],
+        [
+          34.02,
+          -6.99
+        ],
+        [
+          34.09,
+          12.34
+        ]
+      ],
+      "extents": {
+        "sMin": 34.02,
+        "sMax": 44.32,
+        "tMin": -7.07,
+        "tMax": 12.34
+      },
+      "sidesFt": [
+        19.33,
+        10.23,
+        19.33,
+        10.23
+      ],
+      "evidence": "verified",
+      "sourceIds": [
+        "S16"
+      ]
+    }
+  ]
+}

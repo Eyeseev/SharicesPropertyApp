@@ -1,0 +1,7 @@
+{
+  "FICTIONAL_FIXTURE_MARKER": "fixture-7f3a-do-not-ship",
+  "note": "Fictional property used only in tests. Production code must never import this file.",
+  "address": "1 Example Lane, Nowhere (fictional)",
+  "lot": { "front": 40, "depth": 80, "evidence": "estimated" },
+  "house": { "width": 20, "length": 30, "evidence": "estimated" }
+}

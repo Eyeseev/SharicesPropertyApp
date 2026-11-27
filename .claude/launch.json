@@ -1,0 +1,12 @@
+{
+  "version": "0.0.1",
+  "configurations": [
+    {
+      "name": "dev-test-auth",
+      "runtimeExecutable": "npx",
+      "runtimeArgs": ["next", "dev", "-p", "3100"],
+      "env": { "NEXTAUTH_URL": "http://localhost:3100", "AUTH_TEST_MODE": "1", "ALLOWED_EMAILS": "allowed@example.test,second@example.test" },
+      "port": 3100
+    }
+  ]
+}

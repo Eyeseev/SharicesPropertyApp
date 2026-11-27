@@ -1,0 +1,13 @@
+date_or_range,type,event,evidence,confidence,source
+1945,Construction,House built (year built in all official/secondary records),PLUTO yearbuilt 1945; PropertyShark; SKYDB completion 1945,high,PLUTO 26v3 / PropertyShark
+1975-01-07,Transfer,Deed recorded (ACRIS predecessor book record BK_7540080901363) with accompanying mortgage,ACRIS Legals block 13618 lot 5,high for recording date; price unknown,ACRIS via NYC Open Data
+1994-03-24,Finance record,Satisfaction of mortgage recorded (FT_4810004203181),ACRIS Legals / PropertyShark,high,ACRIS
+2012-08,Imagery,Street View: silver/galvanised chain-link fence around both frontages; detached white garage clear; TV antenna not noted at this viewpoint,Google Street View time slider,high (visual),Google Street View
+2015-09,Imagery,Street View: no front/side fence; TV antenna on roof; white detached garage visible,Google Street View,high (visual),Google Street View
+2017-11 to 2018-07,Imagery,Street View: no front fence; low rusty side fence to neighbour driveway only; small dark-red Japanese maple in front yard,Google Street View,high (visual),Google Street View
+2021-03-08,Sale,Recorded sale $569000; deed 2021030900225001 recorded 2021-03-11 with mortgage 2021030900225002,ACRIS Legals + PropertyShark sale table,high,ACRIS / PropertyShark
+2022-11,Imagery,Street View: still no front fence; front maple fuller/red,Google Street View,high (visual),Google Street View
+2022-11 to 2024-10,Exterior change (date range),Black chain-link fence installed around both street frontages - exact date unknown; bracketed by Street View,Street View Nov 2022 absent vs Oct 2024 present,high for range / exact date unknown,Google Street View
+2024-10,Imagery,Street View (250th St + corner): black fence present; best combined front+side view,Google Street View,high (visual),Google Street View
+2026-05,Imagery,Street View (139th Ave): latest imagery found; black fence on 139th side; white vinyl rear fence + red patio umbrella visible at rear (first clear sighting - may predate),Google Street View,high (visual),Google Street View
+Unknown (pre-2012),Addition,Single-storey white extension at SE end of house present in every Street View set from Aug 2012 onward; PLUTO ext code EG records an extension but yearalter1/yearalter2 are 0,Visible in Street View 2012-2026; PLUTO ext=EG,medium-high that it predates Aug 2012; construction date unknown,Street View / PLUTO

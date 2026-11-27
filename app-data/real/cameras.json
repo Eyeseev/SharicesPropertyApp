@@ -1,0 +1,81 @@
+{
+  "units": "ft",
+  "frame": "lot: [s toward SE, t toward NE, height]",
+  "presets": [
+    {
+      "id": "default",
+      "label": "Reset",
+      "position": [
+        -105,
+        -70,
+        80
+      ],
+      "target": [
+        -8,
+        7,
+        6
+      ],
+      "note": "Elevated three-quarter hero view from beyond the 250th St / 139th Ave corner, showing the NW gable door and the 139th Ave side, like the approved mockups' framing. Targets stay inside the camera target box at the house centre (see CameraRig)."
+    },
+    {
+      "id": "front",
+      "label": "Front",
+      "position": [
+        -80,
+        -30,
+        22
+      ],
+      "target": [
+        -12,
+        6,
+        8
+      ],
+      "note": "From the 250th St / 139th Ave corner looking SE at the NW gable door (VISUAL_REFERENCE_BRIEF \u00a77)."
+    },
+    {
+      "id": "side",
+      "label": "Side",
+      "position": [
+        -6,
+        -92,
+        22
+      ],
+      "target": [
+        -6,
+        7,
+        7
+      ],
+      "note": "From 139th Ave looking NE at the SW elevation."
+    },
+    {
+      "id": "rear",
+      "label": "Rear",
+      "position": [
+        95,
+        -28,
+        42
+      ],
+      "target": [
+        -4,
+        7,
+        7
+      ],
+      "note": "From the SE, past the garage, looking NW."
+    },
+    {
+      "id": "top",
+      "label": "Top",
+      "position": [
+        -8,
+        7,
+        230
+      ],
+      "target": [
+        -8,
+        7,
+        0
+      ],
+      "note": "Overhead, long axis vertical on screen (NW at the top)."
+    }
+  ]
+}
