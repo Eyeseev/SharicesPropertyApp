@@ -1,0 +1,68 @@
+{
+ "type": "FeatureCollection",
+ "crs": {
+  "type": "name",
+  "properties": {
+   "name": "EPSG:4326"
+  }
+ },
+ "features": [
+  {
+   "type": "Feature",
+   "id": 660304,
+   "geometry": {
+    "type": "Polygon",
+    "coordinates": [
+     [
+      [
+       -73.7305515940001,
+       40.663029126234
+      ],
+      [
+       -73.730343707363,
+       40.6628042073144
+      ],
+      [
+       -73.7304953888452,
+       40.6627251052119
+      ],
+      [
+       -73.73070327575,
+       40.6629500231568
+      ],
+      [
+       -73.7305515940001,
+       40.663029126234
+      ]
+     ]
+    ]
+   },
+   "properties": {
+    "OBJECTID": 660304,
+    "BORO": "4",
+    "BLOCK": 13618,
+    "LOT": 5,
+    "BBL": "4136180005",
+    "CONDO_FLAG": null,
+    "REUC_FLAG": null,
+    "AIR_LOT_FLAG": null,
+    "SUB_LOT_FLAG": null,
+    "EASEMENT_FLAG": null,
+    "LOT_NOTE": null,
+    "EFFECTIVE_TAX_YEAR": null,
+    "BILL_BBL_FLAG": 0,
+    "NYCMAP_BLDG_FLAG": 0,
+    "CONVERSION_EXCEPTION_FLAG": 0,
+    "VALUE_REFLECTED_OUT_FLAG": 0,
+    "CREATED_USER": null,
+    "CREATED_DATE": 943920000000,
+    "LAST_EDITED_USER": "sj",
+    "LAST_EDITED_DATE": 943920000000,
+    "Shape__Area": 825.97265625,
+    "Shape__Length": 121.60415307809296
+   }
+  }
+ ],
+ "name": "NYC DOF Digital Tax Map - Tax Lot Polygon, BBL 4136180005",
+ "source": "NYC Department of Finance, Digital Tax Map (ArcGIS Digital_Tax_Map_VIEW, layer 5 TAX_LOT_POLYGON), retrieved 2026-11-27"
+}

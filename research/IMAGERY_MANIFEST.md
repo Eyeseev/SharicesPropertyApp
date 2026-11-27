@@ -1,13 +1,13 @@
 # Visual Reference Manifest — 138-37 250th St, Rosedale, NY 11422
-Initial inventory: 2026-11-26; reconciled with PHOTO_ARCHIVE.md (2026-11-27).
-Commercial imagery remains link/observe only. Fifteen official NYC aerial crops are reported saved under CC BY 4.0; see IMG-H3 and the update below.
+Retrieved / inspected: 2026-11-26. NO imagery was downloaded or copied in this mission.
+All items below are LINKS + written observations only, pending rights clearance.
 
 ## Rights summary (read before any mockup use)
 - **Google Maps / Street View / satellite:** © Google / Vexcel. Google's terms permit viewing and linking; screenshots and derivative use are restricted — do NOT embed Google imagery in the app or use it as a texture/model source without checking Google's Maps terms / obtaining permission. SAFE use now: visual reference for a human/AI modeller working from *observations and measurements*, and outbound links. Attribution alone does not grant derivative rights.
 - **Bing Maps aerial / 3D:** © TomTom / Maxar / Vexcel / Microsoft. Same posture: link + observe, do not copy tiles or mesh.
 - **NYC Municipal Archives tax photos:** Viewable free online in the Archives Gallery. Prints / hi-res files are PAID ($45–$60+ per print per NYC311) — purchase requires Vic's approval. Do not scrape the gallery.
 - **NYC / NYS aerial orthophotos (NYCityMap, ZoLa layers, NYS GIS Clearinghouse):** Public-sector imagery, generally reusable under NYC Open Data / NYS terms — the most promising *permitted* aerial source. Verify layer terms at download time.
-- **Owner photos (Sharice/Vic):** Best rights position of all — none collected yet. This remains a major gap for production geometry.
+- **Owner photos (Sharice/Vic):** Best rights position of all — none collected yet. This is the #1 gap to close for mockups.
 
 ## Current imagery — inventoried, with dates
 | ID | Source | Date(s) | Angle | What it shows | Rights |
@@ -25,12 +25,12 @@ Street View URLs (Oct 2024 / May 2026 panos):
 - https://www.google.com/maps/@40.662751,-73.7306639,6a,75y,70h,90t/data=!3m7!1e1!3m5!1sG1YbvKsHxsNSqTiJFEDEgw!2e0
 Note: Google labels this place "Jamaica, NY 11422" in the URL — same Rosedale location/ZIP, a Google locality quirk, not a different property.
 
-## Historical imagery — retrieval status
+## Historical imagery — sources identified (not yet frame-extracted)
 | ID | Source | Coverage | How to get this property | Rights / cost |
 |---|---|---|---|---|
-| IMG-H1 | NYC Municipal Archives **1980s tax photos** (REC-0041, 1982–88) | Every NYC building | Archives Gallery search: block=13618 AND lot=5 (Queens collection); mirror 80s.nyc | **Retrieved 2026-11-27** via 80s.nyc (Luna down): `research/photos/tax-photo-1980s-b13618-l5.jpg`, 610×480, placard-verified; see PHOTO_ARCHIVE.md §B. Private reference only; hi-res/print PAID — approval needed |
-| IMG-H2 | NYC Municipal Archives **1940s tax photos** (REC-0040, 1939–51, bulk 1939–41) | Every building; **vacant land was NOT photographed** | Same block/lot search | House built 1945, bulk photos predate it — a photo may NOT exist; if it does (late 1940s tail), it would be the earliest exterior. Not viewed; same Luna outage; view free when available; prints paid |
-| IMG-H3 | NYCityMap aerial layers | 1924, 1951 (mosaic at Municipal Archives), 1996, 2001, 2004, 2006 + later | 15 dated crops reported saved via current NYC OTI ArcGIS services; see PHOTO_ARCHIVE.md §A | CC BY 4.0 per archive report; attribution required |
+| IMG-H1 | NYC Municipal Archives **1980s tax photos** (REC-0041, 1982–88) | Every NYC building | Archives Gallery search: block=13618 AND lot=5 (Queens collection) | View free online; hi-res/print PAID — approval needed |
+| IMG-H2 | NYC Municipal Archives **1940s tax photos** (REC-0040, 1939–51, bulk 1939–41) | Every building; **vacant land was NOT photographed** | Same block/lot search | House built 1945, bulk photos predate it — a photo may NOT exist; if it does (late 1940s tail), it would be the earliest exterior. View free; prints paid |
+| IMG-H3 | NYCityMap aerial layers | 1924, 1951 (mosaic at Municipal Archives), 1996, 2001, 2004, 2006 + later | Address search in NYCityMap / ZoLa aerial layer picker | Public-sector; verify terms |
 | IMG-H4 | NYS GIS Clearinghouse orthophotos | 1995–2021 by county + NYC 2024 6-inch | Download Queens tiles for the lot coordinates | Public; free download |
 | IMG-H5 | USGS EarthExplorer | Aerial/Landsat 1920s–present (variable local coverage) | Coordinate search 40.66287,-73.73052 | Public domain (USGS) |
 | IMG-H6 | 1924 Fairchild aerial survey (NYPL) | 1924 — pre-development farmland era | NYPL map sheets for SE Queens | Public library; pre-house context only |
@@ -43,12 +43,5 @@ Note: Google labels this place "Jamaica, NY 11422" in the URL — same Rosedale 
 - NOT seen in any imagery: pool, deck, shed. Do not model them.
 - Caution: the driveway/dark SUV/small brick outbuilding immediately NE of the house belong to **138-33**, NOT this property — a classic modelling trap at this lot line.
 
-## 2026-11-27 aerial collection update
-- IMG-H3: 1924, 1951, 1996, 2001–2, 2004, 2006, 2008, 2010, 2012, 2014, 2016, 2018, 2020, 2022, 2024.
-- Reported files: `research/photos/aerials/aerial-<year>.png`; montage `research/photos/aerial-timeline-1924-2024.png`. Exact year token for 2001–2 should be checked against actual filenames.
-- Provider: NYC OTI / DoITT, ArcGIS Now & Then web map item `1a8a1f670cc34731b9e65ddf17bf8d70`, tile organization `yG5s3afENB5iO9fj`. Legacy endpoints moved.
-- Attribution: © City of New York, CC BY 4.0, via NYC OTI ArcGIS ortho services, retrieved 2026-11-27 (as reported in PHOTO_ARCHIVE.md).
-- 1924 shows pre-house land; 1951 shows early roof mass; 1996 onward supports layout comparison. Fine early street-level details are not established.
-- 2021 sale listing photos not found in targeted public searches; original plans not publicly available online in the research session.
-- See `PHOTO_ARCHIVE.md` for full observations, tax-photo blockers, alternate viewers and plan-document leads. Actual image files were not included in this reconciliation and remain to be checked before import.
-- **Update 2026-11-27 (Muse package merge):** the 1980s tax photo (IMG-H1) was retrieved and its placard checked; it is the only known street-level photo before Aug 2012. It shows chain-link fencing already present in the 1980s and yellow gable siding. The front ground floor reads as grey stone-textured, an unresolved difference from today's brick.
+| IMG-H8 | **c. 1982–88** | NYC Municipal Archives 1980s tax photo (REC-0041), via 80s.nyc mirror — NW gable end from the corner: yellow gable siding, white arched door, silver chain-link fence, dog in yard; front ground floor reads grey stone-textured (unresolved vs today's brick) | research/photos/tax-photo-1980s-b13618-l5.jpg (saved 2026-11-27) | Archives image — private reference only; hi-res/prints paid |
+| IMG-H9 | **c. 1939–41** | NYC Municipal Archives 1940s tax photo (REC-0040), via 1940s.nyc — finished brick house: arched door in projecting gable end with stone-textured surround, brick chimney toward SE end, shutters, front hedge, unpaved street. In-frame sign '4931 - 5 Q' (1940s Block 4931, Lot 5) | Link-only: https://1940s.nyc/map/photo/nynyma_rec0040_4_04931_0005_w4 (site Download inert; direct fetch blocked) | Archives image — reference only; prints paid. **Raises build-year conflict vs PLUTO 1945 — see GEOMETRY_VERIFICATION §10** |

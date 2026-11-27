@@ -1,5 +1,5 @@
 # PHOTO ARCHIVE — 138-37 250th Street, Rosedale, NY 11422
-## Public photographs & plan documents, from construction (1945) to today
+## Public photographs & plan documents, from the 1940s to today
 Compiled 2026-11-27. Everything below was retrieved or verified on that date unless noted.
 Saved copies live in `research/photos/`. Rights are stated per item — **do not reuse beyond the stated terms.**
 
@@ -28,10 +28,17 @@ Note: the old maps.nyc.gov tile endpoints now return a "service has moved" place
 - **Silver/galvanised chain-link fence** already enclosing the front yard in the 1980s (fence timeline now: chain-link 1980s → silver chain-link Aug 2012 → absent 2015–2022 → black chain-link by Oct 2024).
 - A dog standing in the front yard; mature shrubs at the foundation; leafless street trees.
 - **Open question for the architects:** the front gable's ground floor reads as **grey stone-textured cladding** in this photo, versus red-brown brick in 2012–2026 Street View. This may be a stone veneer later removed/covered, or a film/lighting artefact of the 1980s colour negative scan. Flagged, NOT resolved — do not model either way on this photo alone.
-- **Reviewer check (Claude, 2026-11-27, image inspected directly):** the placard is legible and matches (13837 250 Street · B 4 · BLK 13618 · LOT 5). Further *provisional* observations for owner-photo confirmation, which are not yet geometry facts: (a) a double-hung **window in the upper NW gable** above the door (the Phase 0.1 model leaves that gable blank); (b) the arched door sits in a **small projecting front gable** set in front of the taller main gable; (c) the **chimney appears closer to the front section** than the model's SE estimate, but perspective makes its position uncertain. The white figure in the yard could be a dog or a lawn ornament.
 **Rights:** NYC Municipal Archives image. This low-resolution copy is the version the Archives' ecosystem makes publicly viewable (watermarked low-res saves are the sanctioned free tier); prints / hi-res files are paid via the Archives order form — purchase needs Vic's approval. Treat as private project reference, not for publication.
 **Access note:** the Archives' Luna gallery (nycma.lunaimaging.com) was unreachable on 2026-11-27 (TLS certificate issued for the wrong host; direct requests empty/503) — a vendor-side outage. The 80s.nyc route bypassed it for the 1980s collection.
-**1940s tax photo (REC-0040):** still unchecked — the 1940s mirror (1940s.nyc, different codebase/backend) was not retrievable the same way, and Luna is down. Given the bulk of that collection is 1939–41 and the house was built 1945, a frame may show the vacant lot or not exist. Remains on the backlog.
+## B2. RETRIEVED 2026-11-27 (later session) — NYC tax photograph, 1940s ⚠️ major find, with a conflict
+**Reference (link-only):** https://1940s.nyc/map/photo/nynyma_rec0040_4_04931_0005_w4 — identifier `nynyma_rec0040_4_04931_0005_w4`, NYC Municipal Archives 1940s tax photos (REC-0040, survey bulk 1939–41), via the 1940s.nyc mirror. The site's Download control was inert and direct image fetch is bot-blocked, so **no file copy could be saved** — this is a link + written observation, like the Street View material. Prints are paid via the Archives (not ordered).
+**Identification:** the photographer's sign in the frame reads **"4931 - 5 Q"** — 1940s tax Block 4931, Lot 5, Queens. The mirror's map places that block at modern Block 13618, and the neighbouring dot checks out consistently (Block 4931 Lot 8 = the next house along 250th St). The site warns its photo placement is automated and may be inaccurate, so placement alone wouldn't be proof — but the house in the frame matches this house on multiple distinctive features (below), making the identification **high-confidence, not certain**.
+**What it shows (B/W, from the street, unpaved road, hedge and young trees in front):**
+- A **finished brick house** — NOT vacant land: 1.5–2 storeys, steep pitched roofs, **three gables facing the camera**.
+- **White arched front door set in a small projecting gable end** — the same entry arrangement as today — with **rough stone / stone-veneer texture around the door projection**, while the rest of the ground floor is visibly **brick**. (This directly informs the 1980s grey-gable question: see GEOMETRY_VERIFICATION §5/§10.)
+- **Tall brick chimney toward the right (SE) end** of the house, as today.
+- White/light **shutters** flanking one ground-floor window; upper gable walls lighter than the brick ground floor; **no fence** in front of this house (a neighbour's picket fence is visible at frame left); small stoop at the door.
+**⚠️ BUILD-YEAR CONFLICT (preserved, not resolved):** PLUTO and every official-derived source say the house was **built 1945**, but this 1939–41 survey photo shows a finished house matching it. The 1924 aerial shows no house on the lot. Explanations, in no proven order: (a) PLUTO's year-built is an estimate/error — known to happen for older Queens homes; (b) 1945 records a rebuild/major alteration of a late-1930s house; (c) the mirror's placement is wrong despite the sign and feature matches. If the photo is this house, it was built **1925–~1940**. Resolution routes: Archives Luna metadata for REC-0040 (gallery down 2026-11-27), the ~1950 Sanborn sheet (in person), DOB Queens microfilm (in person/FOIL — Vic's call). **Do not change the app's stated build year on this evidence alone — present both.**
 
 ## C. LINK-ONLY — Street-level photography, 2012–2026
 Google Street View (3 viewpoints, dated captures Aug 2012 → May 2026) and Bing aerial/3D — full pano URLs and dated observations are in `IMAGERY_MANIFEST.md` (IMG-01..07, IMG-H1..H7). **Terms prohibit copying/embedding** — these remain links + written observations only. This is still the richest street-level record of the house: the 1980s tax photo (B) is the only known street-level photo earlier than 2012.
@@ -49,10 +56,10 @@ The March 2021 sale ($569,000) left **no publicly indexed listing photos**: targ
 
 ## F. Still missing / backlog after this hunt
 1. ~~1980s tax photo~~ — RETRIEVED 2026-11-27 via 80s.nyc (Section B). Optional: order the hi-res print/file from the Archives (paid, Vic's approval).
-2. 1940s tax photo existence check — retry Luna when its certificate is fixed; may be a vacant-lot frame or absent.
+2. ~~1940s tax photo existence check~~ — FOUND 2026-11-27 via 1940s.nyc (Section B2, link-only). Remaining: confirm placement against Archives Luna metadata when the gallery is back, to close the build-year conflict.
 3. Sanborn ~1950 sheet — in-person NYPL (Atlas 158, Queens v. 23) or LOC Geography & Map Room.
 4. Original 1945 plans — DOB Queens microfilm / possible FOIL request (Vic decision; a request = contacting an agency, needs his go-ahead).
 5. Owner photos (Sharice) — still the best-rights, highest-value source, including any 2021 listing photos she kept.
-6. USGS EarthExplorer / HistoricAerials frames between 1951 and 1996 — EarthExplorer needs a free account to download; HistoricAerials is paid (approval needed). The 1951→1996 gap is currently bridged only by the 1980s tax photo (Section B).
+6. Additional aerials between 1951 and 1996 — **checked 2026-11-27, none freely retrievable:** the NYC ortho series jumps 1951 → 1996; NYS ITS ortho services (incl. NAPP) dropped connections / returned errors from this environment; USGS EarthExplorer needs a free account to download; HistoricAerials is paid (approval needed). The gap is bridged at street level by the 1940s (B2) and 1980s (B) tax photos, and overhead only by 1951 and 1996.
 
 *Attribution for Section A images: © City of New York, CC BY 4.0, via NYC OTI ArcGIS ortho services, retrieved 2026-11-27.*

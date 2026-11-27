@@ -85,9 +85,18 @@ export function validateGeometry(raw: unknown, sources: Source[]): ValidationRes
   if (!door || door.params.wall?.value !== 'nw')
     errors.push('front door must be on the NW gable end')
   const drive = rendered.find((e) => e.id === 'driveway')
+  const parcel = spec.elements.find((e) => e.id === 'parcel')
   const num = (v: unknown) => (typeof v === 'number' ? v : NaN)
-  if (!drive || num(drive.params.tMin?.value) !== -25 || !(num(drive.params.sMin?.value) > 0)) {
-    errors.push('driveway must enter from 139th Ave (t = -25) at the SE end (s > 0)')
+  const swLine = num(parcel?.params.tMin?.value)
+  if (
+    !drive ||
+    num(drive.params.tMin?.value) !== swLine ||
+    !(swLine < 0) ||
+    !(num(drive.params.sMin?.value) > 0)
+  ) {
+    errors.push(
+      'driveway must enter from 139th Ave (the parcel SW line, t < 0) at the SE end (s > 0)',
+    )
   }
   const garage = rendered.find((e) => e.kind === 'garage')
   if (!garage || !(num(garage.params.sMin?.value) > 0)) errors.push('garage must be at the SE end')

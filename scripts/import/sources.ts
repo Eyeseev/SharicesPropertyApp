@@ -1,5 +1,5 @@
 /**
- * Sources, hand-seeded from research/SOURCE_INDEX.md (S1–S16). The research file is never edited.
+ * Sources, hand-seeded from research/SOURCE_INDEX.md (S1–S20). The research file is never edited.
  * Google and Bing imagery are link_only: never stored, embedded or used as textures.
  */
 import { Source } from '../../src/data/schema'
@@ -55,7 +55,7 @@ export const SOURCES: Source[] = [
     type: 'official',
     retrieved: '2026-11-26',
     rights: 'usable_data',
-    established: 'Not completed (HTTP 429); backlog',
+    established: 'Not completed on 2026-11-26 (HTTP 429); retried as S20',
   },
   {
     id: 'S7',
@@ -73,7 +73,8 @@ export const SOURCES: Source[] = [
     url: 'https://www.propertyshark.com/mason/Property/784922/138-37-250-St-Queens-NY-11422/',
     retrieved: '2026-11-26',
     rights: 'link_only',
-    established: 'Sale 2021, tax table 2016/17–2025/26, flood zone X, evacuation zone 4',
+    established:
+      'Sale 2021, tax table 2016/17–2025/26 (2025/26 = $6,337; $6,669 is 2026/27), evacuation zone 4. Flood zone now official (S18).',
   },
   {
     id: 'S9',
@@ -142,6 +143,40 @@ export const SOURCES: Source[] = [
     retrieved: '2026-11-26',
     rights: 'usable_data',
     established: 'House and garage polygons and roof heights (data/building_footprints.geojson)',
+  },
+  {
+    id: 'S17',
+    name: 'NYC DOF Digital Tax Map (ArcGIS Digital_Tax_Map_VIEW)',
+    type: 'official',
+    retrieved: '2026-11-27',
+    rights: 'usable_data',
+    established:
+      'Tax-lot polygon (data/tax_lot_polygon.geojson), ≈51.1 × 100.4 ft; street frontages NW end = 250th St, SW side = 139th Ave',
+  },
+  {
+    id: 'S18',
+    name: 'FEMA National Flood Hazard Layer (NFHL)',
+    type: 'official',
+    retrieved: '2026-11-27',
+    rights: 'usable_data',
+    established:
+      'Zone X, area of minimal flood hazard, not a Special Flood Hazard Area (DFIRM 360497)',
+  },
+  {
+    id: 'S19',
+    name: 'NYC DOF Property Valuation and Assessment Data (NYC Open Data yjxr-fw8i)',
+    type: 'official',
+    retrieved: '2026-11-27',
+    rights: 'usable_data',
+    established: 'Final assessments 2010/11–2018/19; match the PropertyShark table exactly',
+  },
+  {
+    id: 'S20',
+    name: 'DOB Permit Issuance (ipu4-2q9a), retry',
+    type: 'official',
+    retrieved: '2026-11-27',
+    rights: 'usable_data',
+    established: '0 permits for BIN 4289397 (jobs, violations and permits all zero)',
   },
 ]
 

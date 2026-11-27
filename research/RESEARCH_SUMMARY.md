@@ -1,10 +1,10 @@
 # Initial Research Summary — Sharices Property App
-Property: 138-37 250th Street, Rosedale, Queens, NY 11422 · Retrieved 2026-11-26 · Stage 1–3 initial package; reconciled 2026-11-27
+Property: 138-37 250th Street, Rosedale, Queens, NY 11422 · Retrieved 2026-11-26 · Stage 1–3 initial package
 
 ## Identity (verified)
 Queens corner lot, BBL 4136180005 (Block 13618, Lot 5), BIN 4289397, also addressed 250-01 139th Ave.
 Coordinates 40.6628678, -73.7305241. Zoning R3X. Queens CB13, Council 31, School District 29, Precinct 116.
-**Discrepancy resolved 2026-11-26:** original PRD/RESEARCH_BRIEF said Rhode Island; corrected to user-confirmed Rosedale, Queens, New York.
+**Discrepancy flagged:** PRD/RESEARCH_BRIEF say Rhode Island; user-confirmed address is New York. User address followed.
 
 ## Geometry & building (verified + observed)
 - Lot 50 × 100 ft = 5,000 sq ft, corner (250th St × 139th Ave), elevation ~16.4 ft (USGS).
@@ -29,7 +29,7 @@ Coordinates 40.6628678, -73.7305241. Zoning R3X. Queens CB13, Council 31, School
 FEMA flood zone X (secondary source — official FIRM check backlogged), hurricane evacuation zone 4, Walk 86 / Transit 64 / Bike 57.
 
 ## Imagery verdict
-Street View is rich: 3 viewpoints, 5–6 dates each, Aug 2012 → May 2026, all four elevations effectively covered (front/corner, both long sides, rear partially via 139th Ave + aerials). Satellite from Google + Bing agree. Historical aerials: 15 NYC crops from 1924–2024 reported saved on 2026-11-27, CC BY 4.0 with attribution. The 1980s tax photograph was retrieved via the 80s.nyc mirror and placard-verified (the Luna gallery was down); the 1940s photo remains unchecked. Commercial imagery remains link/observe-only; owner photos remain a major gap. See PHOTO_ARCHIVE.md.
+Street View is rich: 3 viewpoints, 5–6 dates each, Aug 2012 → May 2026, all four elevations effectively covered (front/corner, both long sides, rear partially via 139th Ave + aerials). Satellite from Google + Bing agree. Historical stills (1980s tax photo) and historical aerials are identified with exact retrieval routes but not yet extracted. ALL commercial imagery is link/observe-only for rights reasons; owner photos are the missing gold source.
 
 ## Confidence
 Identity/geometry/financial-record facts: **high** (official PLUTO/ACRIS, cross-checked). Exterior appearance/change dates: **high** (dated Street View). Permits-absence: **medium-high** (digital systems only). Flood zone: **medium** (secondary). AVM values & beds/baths: **low / low-medium**.
@@ -40,9 +40,17 @@ Identity/geometry/financial-record facts: **high** (official PLUTO/ACRIS, cross-
 - VISUAL_REFERENCE_BRIEF.md prepared for the Higgsfield phase (research/).
 - Parcel (tax-lot) GIS polygon: still not retrieved — dimensions verified, polygon stays on the backlog. Not estimated.
 
-## Addendum — 2026-11-27 photo research
-- 1924 aerial shows pre-house land; 1951 is the earliest retrieved aerial with the house. The 1996–2024 series supports broad exterior layout comparisons.
-- No publicly indexed 2021 listing photo gallery or original downloadable plan set found in targeted searches; this is not proof that none exist.
-- **1980s tax photo retrieved** (`research/photos/tax-photo-1980s-b13618-l5.jpg`, placard-verified). New facts: chain-link fence present in the 1980s and gable siding distinctly yellow then. Unresolved: the front ground floor reads grey stone-textured vs modern brick. The 1940s photo may not exist. Sanborn and original plan leads remain open.
-- The frontage contradiction in VISUAL_REFERENCE_BRIEF.md remains unresolved: working interpretation NW short end / SW long side street frontage, NE interior boundary; verify against parcel or owner photos.
-- These updates are from PHOTO_ARCHIVE.md and the reconciled README; the saved images were not independently inspected in this merge.
+## Addendum 2 — 2026-11-27 photo hunt (at Vic's direction)
+- 15 official NYC aerial crops 1924–2024 saved (CC BY 4.0) — research/photos/aerials/ + timeline montage. 1924 = pre-house farmland; 1951 = earliest aerial with the house.
+- **1980s tax photo RETRIEVED** via 80s.nyc mirror (Luna gallery down, wrong-host TLS cert): placard-verified image of the house, saved as research/photos/tax-photo-1980s-b13618-l5.jpg. New facts: chain-link fence present in the 1980s; siding distinctly yellow then; front gable ground floor reads grey stone-textured (unresolved vs modern brick).
+- No 2021 listing photos exist in public indexes; no blueprints online (DOB Queens microfilm / NYPL Sanborn Atlas 158 Queens v.23 are in-person routes). Full index: research/PHOTO_ARCHIVE.md.
+
+## Addendum 3 — 2026-11-27 verification mission (at Vic's direction)
+Full detail: research/GEOMETRY_VERIFICATION.md; change list: CHANGELOG.md (project root).
+- **Parcel polygon RETRIEVED** (NYC DOF Digital Tax Map): true rectangle 100.4 × 51.1 ft, saved as data/tax_lot_polygon.geojson. **Orientation conflict RESOLVED:** street frontages are the NW 50-ft end (250th St) and the SW 100-ft side (139th Ave) only — the NE long side is an interior lot line, correcting the Visual Reference Brief. Building placement calculated from the two official polygons (house ≈19 ft back from 250th St, ≈8 ft off 139th Ave, ≈30 ft rear zone; garage ≈3 ft off the rear line, long axis across the lot; extension ≈8.5 ft long [CALC], width unresolved).
+- **1940s tax photo FOUND** via 1940s.nyc (link-only): a finished brick house matching this house's distinctive features, in-frame sign "4931 - 5 Q". **This conflicts with PLUTO's 1945 build year** — preserved as an open conflict (photo implies 1925–~1940); do not state one year as settled. The photo also narrows the 1980s grey-gable question: stone texture sits at the entry projection in both the 1940s and 1980s frames, brick elsewhere.
+- **Extension/garage dating narrowed:** extension present by 2004 (aerial), garage probable by 2004, both certain by Aug 2012; no documentary date exists.
+- **Taxes verified against NYC DOF directly** (Open Data yjxr-fw8i, FINAL rows 2010/11–2018/19 — matches the PropertyShark table exactly). **$6,669 conflict RESOLVED:** it is the 2026/27 figure; 2025/26 = $6,337.
+- **FEMA flood zone X now OFFICIAL** (NFHL point query: Zone X, Area of Minimal Flood Hazard, not SFHA, DFIRM 360497).
+- **DOB Permit Issuance retry complete: 0 records** — jobs/violations/permits all zero.
+- No additional free aerials exist for 1951–1996 from the checked services (NYC series jumps 1951→1996; NYS ITS/NAPP unreachable; EarthExplorer needs an account; HistoricAerials paid).

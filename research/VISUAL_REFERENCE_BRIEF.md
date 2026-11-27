@@ -3,7 +3,7 @@
 
 **Property:** 138-37 250th Street, Rosedale, Queens, New York, NY 11422 (corner of 250th Street & 139th Avenue)
 **Purpose:** Describe the ACTUAL property in enough detail that an image-generation AI can produce stylized architectural concepts that are recognizably *this* house, on *this* lot — not a generic suburban home.
-**Style direction (final approval 2026-11-27; see CREATIVE_DIRECTION.md and mockups/APPROVED_SIGNATURE_STYLE.png):** 75% luminous digital architectural miniature / 25% luxury architectural rendering. Premium stylized architectural miniature; dark blue atmosphere, warm amber accents, cyan digital augmentation, elegant illuminated edges, glass + physical architectural surfaces, parcel-shaped display platform, stylized vegetation, soft shadows, cinematic signature lighting, no sound. **Beauty over photorealism — but geometry comes from this brief, never from the style reference images. Do not copy any reference house's shape.**
+**Style direction (from CREATIVE_DIRECTION.md):** Premium stylized architectural miniature; dark blue atmosphere, warm amber accents, cyan digital augmentation, elegant illuminated edges, glass + physical architectural surfaces, parcel-shaped display platform, stylized vegetation, soft shadows, cinematic signature lighting, no sound. **Beauty over photorealism — but geometry comes from this brief, never from the style reference images. Do not copy any reference house's shape.**
 **Evidence key:** **[V]** = verified in official records · **[O]** = observed in dated imagery · **[E]** = estimate / third-party, treat as approximate.
 
 ---
@@ -11,7 +11,7 @@
 ## 1. The lot — proportions and orientation
 
 - Rectangular **corner lot, 50 ft wide × 100 ft deep = 5,000 sq ft** [V]. Long axis runs **NW–SE**.
-- Two street frontages: working interpretation is the **NW short end faces 250th Street** and the **SW long side faces 139th Avenue**. The NE long side is likely the interior lot line. **Unresolved:** initial research also described the NE side as facing 250th Street, inconsistent with the rectangular corner-lot geometry. Confirm with parcel polygon or owner photos. The lot sits on the SE corner of the intersection.
+- Two street frontages **(CORRECTED 2026-11-27 against the official NYC Digital Tax Map — see GEOMETRY_VERIFICATION.md)**: the **NW short end (50 ft) faces 250th Street** and the **SW long side (100 ft) faces 139th Avenue**. The **NE long side is NOT a street frontage** — it is an interior lot line against the neighbour at 138-33. The lot sits on the SE corner of the intersection.
 - The house's long axis is **parallel to 139th Avenue and perpendicular to 250th Street** [O]. Its front door faces NW, toward the intersection — the house effectively presents a **gable end to the corner**, not a long facade to its address street. This is the single most recognisable thing about the property's layout.
 - Ground is essentially **flat, ~16 ft above sea level** [V] — low coastal-plain terrain near Hook Creek / Jamaica Bay. No slopes, retaining walls or grade drama.
 - For the stylized platform: a clean 1:2 rectangle (50×100), house occupying the NW two-thirds, driveway + garage at the SE end, lawns at the NW front and along the SW side.
@@ -24,7 +24,7 @@
   1. **NW section (front):** steep pitched gable, the triangular gable end facing the intersection/corner.
   2. **SE / main section:** larger, lower-pitched roof, reading flatter and lighter from above.
 - **Front door** [O]: centred in the NW gable end — **white, arched top with an oval glass insert, stone surround, small projecting gable porch roof** over it, reached by **red-brown concrete steps with black metal railings** and a straight concrete walkway to a gate at the corner.
-- **Windows** [O]: white-framed double-hung windows throughout. NE long side (frontage designation unresolved; see §1): a ground-floor window beside the front section. SW (139th Ave) long side: **two ground-floor windows** (one with white blinds, one with lace curtains in recent imagery), **two small basement windows** low on the wall with bars, and a **small window in the upper gable**. Upper gable on the 139th side also shows two double-hung windows in some years.
+- **Windows** [O]: white-framed double-hung windows throughout. NE long side (faces the neighbour's side yard, not a street): a ground-floor window beside the front section. SW (139th Ave) long side: **two ground-floor windows** (one with white blinds, one with lace curtains in recent imagery), **two small basement windows** low on the wall with bars, and a **small window in the upper gable**. Upper gable on the 139th side also shows two double-hung windows in some years.
 - **Basement** [V/O]: present — the small low barred windows on the 139th Ave elevation are a real, repeatable detail.
 
 ## 3. Exterior materials and colours
@@ -56,12 +56,12 @@
 - **Side yard (SW, along 139th Ave)** [O]: a maintained lawn strip running the length of the house, with **large mature street/side trees** whose canopies overhang the 139th Ave side and partly shade the house's NW end. Several mature trees ring the lot — NW corner, north corner near 250th St, and along 139th Ave.
 - **Rear yard (SE)** [O]: mostly the concrete driveway/pad and garage; a narrow lawn strip; a **white vinyl fence section at the rear with a red patio umbrella behind it** is clearly visible only in May 2026 imagery — a valid present-day detail, not confirmed for earlier years.
 - **Perimeter fencing — present day** [O]: **black chain-link fence, ~4 ft, enclosing BOTH street frontages**, with a **black metal gate at the corner** aligned with the front walkway, and a gate/front section along 250th St.
-  - Historical states (only if a dated concept is requested): chain-link already present in the 1980s (tax photo) → silver/galvanised chain-link (2012) → **no front fence at all** (2015–2022, only a low rusty side fence on the NE lot line) → black chain-link (by Oct 2024–present). Fence state is the property's biggest dated visual change — never mix states within one image.
+  - Historical states (only if a dated concept is requested): silver/galvanised chain-link (2012) → **no front fence at all** (2015–2022, only a low rusty side fence on the NE lot line) → black chain-link (by Oct 2024–present). Fence state is the property's biggest dated visual change — never mix states within one image.
 - **No swimming pool, no deck, no shed** in any imagery from 2012–2026 [O]. Do not add them.
 
 ## 7. Relative placement — the layout in one paragraph
 
-Stand at the intersection and look SE: the brick-and-cream gable end with the white arched door faces you, red maple to its side, black chain-link and corner gate in front. The house stretches away from you to the SE, its long brick side with two windows and low basement windows running along 139th Avenue on your right (SW), its other long side on your left (NE), provisionally the interior lot boundary (see §1). Two-thirds back, the white single-storey extension steps the building down; behind it the concrete driveway (entered from 139th Ave) opens into a pad, and the small white detached garage with its dark pitched roof closes the SE end of the lot. Large trees canopy the NW corner and the 139th Ave edge throughout.
+Stand at the intersection and look SE: the brick-and-cream gable end with the white arched door faces you, red maple to its side, black chain-link and corner gate in front. The house stretches away from you to the SE, its long brick side with two windows and low basement windows running along 139th Avenue on your right (SW), its other long side facing the neighbour's yard on your left (NE). Two-thirds back, the white single-storey extension steps the building down; behind it the concrete driveway (entered from 139th Ave) opens into a pad, and the small white detached garage with its dark pitched roof closes the SE end of the lot. Large trees canopy the NW corner and the 139th Ave edge throughout.
 
 ## 8. Distinguishing features — what makes it THIS house
 
@@ -86,7 +86,7 @@ Stand at the intersection and look SE: the brick-and-cream gable end with the wh
 - ❌ Do NOT add a pool, deck, shed, or second chimney — none exist.
 - ❌ Do NOT flip the lot: driveway and garage are at the **SE** end; door and front yard at the **NW** corner. A mirrored model is a wrong model.
 - ❌ Do NOT model neighbouring houses (per PRD) — context may be suggested with generic massing/trees only, kept visually subordinate.
-- ❌ Do NOT present the pale-yellow (2012–2015) siding and the black fence together as one era, or invent a pre-2012 appearance — the only pre-2012 street-level image is the low-res 1980s tax photo (PHOTO_ARCHIVE.md §B), which shows one moment and leaves open questions (e.g. stone-textured vs brick front); the 1951 and later aerials support broad massing only.
+- ❌ Do NOT present the pale-yellow (2012–2015) siding and the black fence together as one era, or invent a pre-2012 appearance — no verified imagery of the house predates Aug 2012 in this package (the 1980s tax photo is still to be retrieved).
 
 ## 10. Verified vs estimated geometry
 
@@ -112,14 +112,11 @@ Full detail: `research/IMAGERY_MANIFEST.md`. Summary for the design phase:
 | Google Street View (3 viewpoints) | Aug 2012, Sep 2015, Oct/Nov 2017, Jul 2018, Nov 2022, Oct 2024, **May 2026** | **Link + observe only.** Do NOT screenshot/embed/copy into the app or use as textures. Written observations in this brief ARE the permitted working material |
 | Google satellite / Bing aerial + Bing 3D | Undated (©2026) overheads, mutually confirming | Link + observe only, same restriction |
 | NYC Building Footprints GeoJSON | Official polygons + heights | **Usable data** — NYC Open Data terms; saved in `data/` |
-| NYC 1980s tax photo (Archives, block 13618 / lot 5) | Front exterior photo, 1982–88 | **Retrieved 2026-11-27** via 80s.nyc (Luna was down): `research/photos/tax-photo-1980s-b13618-l5.jpg`, placard-verified. Private reference only; hi-res/prints are **paid — Vic's approval required**. Do not scrape |
-| Historical aerials (NYCityMap / NYS orthophotos / USGS) | 1924, 1996–2024 various | 15 NYC aerial crops (1924–2024) reported saved 2026-11-27; CC BY 4.0 with attribution per PHOTO_ARCHIVE.md. Other aerial sources not yet extracted. |
+| NYC 1980s tax photo (Archives, block 13618 / lot 5) | One front exterior photo, 1982–88 | Not yet retrieved. Viewing free online; hi-res/prints are **paid — Vic's approval required**. Do not scrape |
+| Historical aerials (NYCityMap / NYS orthophotos / USGS) | 1924, 1996–2024 various | Identified, not yet frame-extracted; public-sector terms, verify at download |
 | Owner photos (Sharice/Vic) | None yet | **Best rights position — still the #1 gap.** Request before production geometry is locked |
 
 **Mockup rule from CREATIVE_DIRECTION.md:** concepts must be *grounded in the actual exterior and parcel* described above, compared on silhouette, placement, coherence, lighting, vegetation, UI legibility and feasibility — and the strongest direction gets Vic's approval before any production coding. Mockups are aspirational concepts, not working geometry.
 
 ---
 *Prepared 2026-11-26 from the initial research package (see RESEARCH_SUMMARY.md, SOURCE_INDEX.md, IMAGERY_MANIFEST.md, BACKLOG.md and data/property.json). Nothing in this brief is invented: every feature above traces to a record or a dated image cited in that package.*
-
-## 2026-11-27 reconciliation note
-The approved mockups define artistic style and interface, not authoritative geometry. Do not reproduce their artistic deviations (dormers, long-side door, uniform roof, shutters, cream garage, boulder); lanterns, path lights and glowing posts are stylistic elements only. See the reconciled README and CREATIVE_DIRECTION.md. The original observations remain provisional where uncertain. PHOTO_ARCHIVE.md documents the new aerial collection; its actual images were not inspected during this reconciliation.

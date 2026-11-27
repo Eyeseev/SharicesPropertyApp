@@ -302,7 +302,8 @@
     "Current tax: same PropertyShark page gives $6,669 as both '2026-2027' (header) and '2025-2026' (FAQ); table's 2025/26 tax is $6,337. Amounts preserved as reported.",
     "Building area 1,052 sq ft (PLUTO) vs 1,050 sq ft FAR area (PropertyShark).",
     "Upper gable siding reads pale yellow (2012, 2015) vs cream/white (2022-2026) in Street View - lighting vs repaint unresolved; do NOT assert a repaint.",
-    "Stories: PLUTO/SKYDB/Street View agree 1.5; some aggregator tables garble this as '2, 2' (buildings/units fields) - 1.5 is used."
+    "Stories: PLUTO/SKYDB/Street View agree 1.5; some aggregator tables garble this as '2, 2' (buildings/units fields) - 1.5 is used.",
+    "BUILD YEAR: PLUTO says 1945, but the 1940s tax photo (1939-41 survey) found 2026-11-27 via 1940s.nyc shows a finished house matching this house's distinctive features on Lot 5. Both preserved; see verification_2026_11_27.build_year_conflict."
   ],
   "building_footprints_official": {
     "source": "NYC Building Footprints, NYC Open Data dataset 5zhs-2jue (OTI), photogrammetric, retrieved 2026-11-26",
@@ -333,6 +334,100 @@
     "reconciliation": "Footprint outline (24.2 x 50.5 ft) is longer/wider than PLUTO wall dims (22 x 42 ft): it is a roof outline including eaves, with the SE extension merged into the same rectangle. PLUTO's 1,052 sq ft gross area remains the official building area.",
     "parcel_polygon": {
       "status": "NOT retrieved - lot dimensions verified (50 x 100 ft, PLUTO) but the official tax-lot polygon (Digital Tax Map) was not extractable as a file in this session; footprints above are the verified geometry. Parcel polygon remains a backlog item, not estimated here."
+    }
+  },
+  "verification_2026_11_27": {
+    "parcel_polygon": {
+      "source": "NYC DOF Digital Tax Map, ArcGIS Digital_Tax_Map_VIEW layer 5, BBL=4136180005",
+      "file": "tax_lot_polygon.geojson",
+      "measured_edges_ft": [
+        100.42,
+        51.1
+      ],
+      "nominal_pluto_ft": [
+        100,
+        50
+      ],
+      "street_frontages_official": {
+        "NW_50ft": "250th Street",
+        "SW_100ft": "139th Avenue",
+        "NE_100ft": "interior lot line (no street)",
+        "SE_50ft": "interior lot line"
+      },
+      "confidence": "verified official GIS"
+    },
+    "placement_calculated_from_official_polygons": {
+      "method": "centroid-to-lot-line distances minus footprint half-dims; DOF lot polygon x OTI footprints",
+      "house": {
+        "front_setback_from_250th_ft": 19.3,
+        "sw_wall_to_139th_line_ft": 8.4,
+        "ne_wall_to_lot_line_ft": 18.5,
+        "se_outline_to_rear_line_ft": 30.5
+      },
+      "garage": {
+        "se_wall_to_rear_line_ft": 3.2,
+        "long_axis": "NE-SW across lot width",
+        "position_across_lot": "roughly centred"
+      },
+      "extension_length_ft_calc": 8.5,
+      "extension_width": "not resolved by official data"
+    },
+    "fema_flood_official": {
+      "source": "FEMA NFHL public service, point query 2026-11-27",
+      "zone": "X",
+      "subtype": "AREA OF MINIMAL FLOOD HAZARD",
+      "sfha": false,
+      "dfirm_id": "360497",
+      "confidence": "verified official"
+    },
+    "dob_permits_retry": {
+      "dataset": "ipu4-2q9a Permit Issuance",
+      "bin": "4289397",
+      "records": 0,
+      "date": "2026-11-27",
+      "note": "completes the trio: jobs 0, violations 0, permits 0"
+    },
+    "dof_verification": {
+      "dataset": "yjxr-fw8i Property Valuation and Assessment Data (FINAL rows)",
+      "coverage_for_this_lot": "2010/11-2018/19",
+      "result": "all overlapping figures match PropertyShark table exactly (2016/17 market 389000, assessed 23340)",
+      "recent_years": "2019/20-2026/27 not in a queryable DOF table; remain PropertyShark-relayed"
+    },
+    "tax_6669_resolution": {
+      "finding": "$6,669 is the 2026/27 figure; 2025/26 = $6,337",
+      "basis": "PropertyShark header labels 2026-2027; FAQ '2025-2026' label sits in stale boilerplate carrying 2023/24 values; 2025/26 arithmetic (39540 assessed, 31937 taxable, 19.843%) yields 6337, cannot yield 6669",
+      "confidence": "medium-high (reasoned)"
+    },
+    "extension_garage_dating": {
+      "extension": "present by 2004 aerial (probable-confirmed); certain by Aug 2012 Street View",
+      "garage": "probable by 2004; certain by Aug 2012",
+      "not_claimed": "1945 garage construction_year in footprint data is a dataset carryover, not evidence"
+    },
+    "gable_material_1980s": {
+      "finding": "1980s tax photo: gable-end ground floor grey stone-textured while side wall reads red-brown brick in the same frame; modern = brick throughout",
+      "status": "OPEN - coating/veneer since removed is an inference, not a fact"
+    },
+    "tax_photo_1940s": {
+      "status": "FOUND via 1940s.nyc mirror (free), viewed 2026-11-27; image file NOT downloadable through the site (Download button inert; direct fetch blocked) - link-only reference",
+      "identifier": "nynyma_rec0040_4_04931_0005_w4",
+      "url": "https://1940s.nyc/map/photo/nynyma_rec0040_4_04931_0005_w4",
+      "collection": "NYC Municipal Archives 1940s tax photos (REC-0040), survey bulk 1939-41",
+      "in_frame_sign": "4931 - 5 Q (1940s tax Block 4931, Lot 5, Queens; the mirror's map places Block 4931 at modern Block 13618 - neighbouring dot verified consistent: 4931 Lot 8 next door)",
+      "shows": "Finished brick house: arched white door in a small projecting gable end with stone/stone-veneer texture around the door, brick ground floor elsewhere, lighter upper gables, tall brick chimney toward the SE (right) end, shutters on one ground-floor window, front hedge, no fence, unpaved street",
+      "rights": "NYC Municipal Archives image, courtesy line on site; prints paid via Archives - not ordered",
+      "confidence": "high that this is the same house/lot (sign + consistent neighbouring lot numbering + multiple distinctive feature matches); placement is the mirror's automated mapping, which the site itself warns may be inaccurate"
+    },
+    "build_year_conflict": {
+      "status": "OPEN CONFLICT - do not silently resolve",
+      "official_record": "PLUTO/PropertyShark/SKYDB: year built 1945",
+      "conflicting_evidence": "1940s tax photo (survey bulk 1939-41) shows a finished house on this lot whose distinctive features match the current house (arched door in projecting gable end, stone-textured door surround, brick chimney toward SE end, brick ground floor + lighter gables). 1924 aerial shows NO house on the lot.",
+      "possible_explanations": [
+        "PLUTO year-built is an estimate/error (known to occur for older Queens homes)",
+        "the 1945 date records a rebuild or major alteration of a late-1930s house",
+        "the mirror's automated photo placement is wrong despite the in-frame Lot 5 sign and consistent neighbouring numbering"
+      ],
+      "implication_if_photo_is_correct": "house built between 1925 and ~1940, not 1945",
+      "resolution_routes": "Municipal Archives Luna metadata for REC-0040 block 4931/lot 5 (gallery was down 2026-11-27); Sanborn ~1950 sheet (in person, NYPL); DOB Queens microfilm (in person/FOIL, Vic decision)"
     }
   }
 }

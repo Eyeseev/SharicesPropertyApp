@@ -3,6 +3,7 @@ import { readFileSync } from 'node:fs'
 import path from 'node:path'
 import { buildFootprints } from '../../scripts/import/footprints'
 import { buildSources } from '../../scripts/import/sources'
+import { buildParcel } from '../../scripts/import/parcel'
 import { validateGeometry } from '../../scripts/import/geometry'
 import { runImport } from '../../scripts/import/run'
 import { CameraSet, GeometrySpec } from '../../src/data/schema'
@@ -64,7 +65,7 @@ describe('footprint extents (brief §7.1, ±0.3 ft)', () => {
   })
 })
 
-describe('parcel sanity margins (brief §7.2, ±1 ft)', () => {
+describe('parcel from the official tax-lot polygon', () => {
   const spec = GeometrySpec.parse(geometryRaw())
   const parcel = spec.elements.find((e) => e.id === 'parcel')!
   const fp = buildFootprints(path.join(ROOT, 'data/building_footprints.geojson'))
@@ -72,20 +73,26 @@ describe('parcel sanity margins (brief §7.2, ±1 ft)', () => {
   const garage = fp.footprints.find((f) => f.id === 'footprint-garage')!.extents
   const p = (k: string) => parcel.params[k]!.value as number
   const within = (a: number, b: number) => expect(Math.abs(a - b)).toBeLessThanOrEqual(1)
+  const near = (a: number, b: number) => expect(Math.abs(a - b)).toBeLessThanOrEqual(0.3)
 
-  it('is 50 × 100 ft centred on the PLUTO point', () => {
-    expect(p('sMax') - p('sMin')).toBe(100)
-    expect(p('tMax') - p('tMin')).toBe(50)
-    expect(p('sMin') + p('sMax')).toBe(0)
-    expect(p('tMin') + p('tMax')).toBe(0)
-    expect(parcel.evidence).toBe('derived_approximate')
+  it('matches the official DOF tax-lot polygon (±0.3 ft)', () => {
+    const fit = buildParcel(path.join(ROOT, 'data/tax_lot_polygon.geojson'))
+    for (const k of ['sMin', 'sMax', 'tMin', 'tMax'] as const) near(p(k), fit[k])
+    within(p('sMax') - p('sMin'), 100.4)
+    within(p('tMax') - p('tMin'), 51.1)
+    expect(parcel.evidence).toBe('verified')
   })
 
-  it('leaves the observed yard margins', () => {
-    within(house.sMin - p('sMin'), 16.5) // front yard
-    within(house.tMin - p('tMin'), 20) // SW side lawn along 139th Ave
-    within(p('tMax') - house.tMax, 6) // NE strip
-    within(p('sMax') - garage.sMax, 6) // rear margin behind the garage
+  it('leaves the official yard margins', () => {
+    within(house.sMin - p('sMin'), 19.5) // front yard, 250th St
+    within(house.tMin - p('tMin'), 18.3) // SW side lawn along 139th Ave
+    within(p('tMax') - house.tMax, 8.4) // NE strip against 138-33
+    within(p('sMax') - garage.sMax, 3.1) // rear margin behind the garage
+  })
+
+  it('passes the importer polygon check', () => {
+    const { errors } = runImport({ write: false })
+    expect(errors).toEqual([])
   })
 })
 

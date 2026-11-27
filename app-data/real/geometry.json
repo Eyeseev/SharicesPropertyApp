@@ -5,22 +5,23 @@
     "originLat": 40.6628678,
     "originLon": -73.7305241,
     "longAxisBearingDeg": 145.8,
-    "note": "Lot frame: s = distance toward SE along the long axis, t = distance toward NE across the lot, origin = PLUTO point. NW short end (s = -50) faces 250th Street; SW long side (t = -25) faces 139th Avenue; NE long side (t = +25) is the interior lot line shared with 138-33. Frontage reading is the working interpretation of a wording conflict in the research (CREATIVE_DIRECTION §5); evidence: observed, to confirm with owner photos."
+    "note": "Lot frame: s = distance toward SE along the long axis, t = distance toward NE across the lot, origin = PLUTO point. NW short end (s ≈ -52.9) faces 250th Street; SW long side (t ≈ -23.4) faces 139th Avenue; NE long side (t ≈ +27.6) is the interior lot line shared with 138-33. Frontages verified by the DOF Digital Tax Map block-face flags (S17, GEOMETRY_VERIFICATION §2). The lot polygon sits ≈1° off this house-derived axis; the parcel is drawn as the mid-edge rectangle."
   },
   "objects": [
     {
       "id": "house",
       "label": "House",
       "evidence": "verified",
-      "sourceIds": ["S1", "S16", "S9"],
+      "sourceIds": ["S1", "S16", "S9", "S13"],
       "facts": [
         { "label": "Walls", "value": "22 × 42 ft", "evidence": "verified" },
         { "label": "Gross area", "value": "1,052 sq ft", "evidence": "verified" },
         { "label": "Storeys", "value": "1.5 (Cape Cod)", "evidence": "verified" },
-        { "label": "Built", "value": "1945", "evidence": "verified" },
+        { "label": "Built (city record)", "value": "1945", "evidence": "verified" },
+        { "label": "Build year", "value": "Open: a 1939–41 tax photo may show this house already standing", "evidence": "unknown" },
         { "label": "Eave height", "value": "≈10 ft", "evidence": "estimated" }
       ],
-      "note": "Brick ground floor, cream siding in the gables (observed). Basement present."
+      "note": "Brick ground floor, cream siding in the gables (observed). Basement present. Build year is an open conflict: PLUTO says 1945, but the 1940s tax photo (Block 4931 Lot 5, survey 1939–41) shows a matching finished house, and the 1924 aerial shows none (GEOMETRY_VERIFICATION §10). Do not present 1945 as settled."
     },
     {
       "id": "roof",
@@ -63,9 +64,9 @@
       "sourceIds": ["S1", "S9", "S16"],
       "facts": [
         { "label": "Form", "value": "Single storey, white", "evidence": "observed" },
-        { "label": "Length", "value": "≈6.9 ft (inferred from roof outline)", "evidence": "estimated" },
+        { "label": "Length", "value": "≈6.9 ft walls (8.5 ft outline minus eaves)", "evidence": "estimated" },
         { "label": "Width / height", "value": "≈22 ft / ≈9 ft", "evidence": "estimated" },
-        { "label": "Built", "value": "Unknown (before Aug 2012)", "evidence": "unknown" }
+        { "label": "Built", "value": "Present by 2004 (aerial), certain by Aug 2012", "evidence": "historical_approximation" }
       ]
     },
     {
@@ -77,7 +78,8 @@
         { "label": "Outline", "value": "19.3 × 10.2 ft", "evidence": "verified" },
         { "label": "Roof height", "value": "11.5 ft", "evidence": "verified" },
         { "label": "Walls / door", "value": "White frame, white single-car door", "evidence": "observed" },
-        { "label": "Door side", "value": "SW, facing 139th Ave", "evidence": "derived_approximate" }
+        { "label": "Door side", "value": "SW, facing 139th Ave (unconfirmed)", "evidence": "derived_approximate" },
+        { "label": "Built", "value": "Probably by 2004 (aerial), certain by Aug 2012", "evidence": "historical_approximation" }
       ]
     },
     {
@@ -127,14 +129,17 @@
     {
       "id": "parcel",
       "label": "Parcel",
-      "evidence": "derived_approximate",
-      "sourceIds": ["S1", "S16"],
+      "evidence": "verified",
+      "sourceIds": ["S1", "S17", "S7", "S18"],
       "facts": [
         { "label": "Size", "value": "50 × 100 ft, 5,000 sq ft, corner lot", "evidence": "verified" },
-        { "label": "Position", "value": "Approximate (official tax-lot polygon not yet retrieved)", "evidence": "derived_approximate" },
-        { "label": "Elevation", "value": "≈16 ft, flat", "evidence": "verified" }
+        { "label": "Measured polygon", "value": "≈51.1 × 100.4 ft", "evidence": "verified" },
+        { "label": "Frontages", "value": "250th St (NW end), 139th Ave (SW side)", "evidence": "verified" },
+        { "label": "Position", "value": "Official DOF tax-lot polygon", "evidence": "verified" },
+        { "label": "Elevation", "value": "≈16 ft, flat", "evidence": "verified" },
+        { "label": "Flood zone", "value": "X, minimal hazard (not SFHA)", "evidence": "verified" }
       ],
-      "note": "Dimensions verified, position approximate (decision D5)."
+      "note": "Lot polygon from the NYC DOF Digital Tax Map (data/tax_lot_polygon.geojson)."
     }
   ],
   "elements": [
@@ -143,17 +148,17 @@
       "kind": "parcel",
       "objectId": "parcel",
       "params": {
-        "sMin": { "value": -50, "unit": "ft", "evidence": "derived_approximate" },
-        "sMax": { "value": 50, "unit": "ft", "evidence": "derived_approximate" },
-        "tMin": { "value": -25, "unit": "ft", "evidence": "derived_approximate" },
-        "tMax": { "value": 25, "unit": "ft", "evidence": "derived_approximate" },
+        "sMin": { "value": -52.9, "unit": "ft", "evidence": "verified", "note": "NW lot line (250th St), mid-edge of the DOF tax-lot polygon in the lot frame." },
+        "sMax": { "value": 47.4, "unit": "ft", "evidence": "verified", "note": "SE rear lot line." },
+        "tMin": { "value": -23.4, "unit": "ft", "evidence": "verified", "note": "SW lot line (139th Ave)." },
+        "tMax": { "value": 27.6, "unit": "ft", "evidence": "verified", "note": "NE interior lot line against 138-33." },
         "lotFront": { "value": 50, "unit": "ft", "evidence": "verified" },
         "lotDepth": { "value": 100, "unit": "ft", "evidence": "verified" },
         "platformThickness": { "value": 0.6, "unit": "ft", "evidence": "estimated", "note": "Display only: miniature platform edge, not a property dimension." }
       },
-      "evidence": "derived_approximate",
-      "sourceIds": ["S1", "S16"],
-      "notes": "Decision D5: 50 × 100 ft rectangle (dimensions verified, PLUTO) centred on the PLUTO point and aligned to the house axis; position assumes the PLUTO point lies near the lot centre. Sanity check against the footprints: front yard ≈16.4 ft (s -50 to house outline -33.6), SW side lawn ≈19.9 ft (t -25 to -5.1), NE strip ≈5.9 ft (19.1 to 25), rear margin ≈5.7 ft behind the garage (44.3 to 50). Matches the observed layout. Replace when the official tax-lot polygon is retrieved."
+      "evidence": "verified",
+      "sourceIds": ["S1", "S17"],
+      "notes": "Official DOF tax-lot polygon (S17) projected into the lot frame by scripts/import/parcel.ts; the importer fails if these extents drift more than 0.3 ft from the polygon. Margins against the official footprints: front yard ≈19.5 ft (NW line to house outline), SW side lawn along 139th Ave ≈18.3 ft, NE strip against 138-33 ≈8.4 ft, rear margin behind the garage ≈3.1 ft. These match the earlier D5 layout within ≈3 ft, so the model was not mirrored. GEOMETRY_VERIFICATION §3 states the two side distances the other way round (≈8 ft to 139th Ave, ≈18.5 ft to the NE line); the polygon and footprints give the reverse."
     },
     {
       "id": "house-walls",
@@ -401,7 +406,7 @@
       "params": {
         "sMin": { "value": 33, "unit": "ft", "evidence": "estimated" },
         "sMax": { "value": 45, "unit": "ft", "evidence": "estimated" },
-        "tMin": { "value": -25, "unit": "ft", "evidence": "observed", "note": "Enters from 139th Ave." },
+        "tMin": { "value": -23.4, "unit": "ft", "evidence": "observed", "note": "Enters from 139th Ave." },
         "tMax": { "value": -7.1, "unit": "ft", "evidence": "derived_approximate", "note": "Ends at the garage door." },
         "material": { "value": "concrete-light", "evidence": "observed" }
       },
@@ -428,7 +433,7 @@
       "id": "walkway",
       "kind": "slab",
       "params": {
-        "sMin": { "value": -50, "unit": "ft", "evidence": "observed" },
+        "sMin": { "value": -52.9, "unit": "ft", "evidence": "observed" },
         "sMax": { "value": -36.5, "unit": "ft", "evidence": "estimated", "note": "Meets the foot of the front steps." },
         "tMin": { "value": 5.5, "unit": "ft", "evidence": "estimated" },
         "tMax": { "value": 8.5, "unit": "ft", "evidence": "estimated" },
@@ -443,7 +448,7 @@
       "kind": "fence",
       "objectId": "fence-front",
       "params": {
-        "points": { "value": [-50, -25, -50, 5.25], "unit": "ft", "evidence": "observed", "note": "Flat list of s,t pairs. Runs from the street corner to the gate." },
+        "points": { "value": [-52.9, -23.4, -52.9, 5.25], "unit": "ft", "evidence": "observed", "note": "Flat list of s,t pairs. Runs from the street corner to the gate." },
         "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
         "style": { "value": "chain-link-black", "evidence": "observed" }
       },
@@ -457,7 +462,7 @@
       "kind": "fence",
       "objectId": "fence-front",
       "params": {
-        "points": { "value": [-50, 8.75, -50, 25], "unit": "ft", "evidence": "observed" },
+        "points": { "value": [-52.9, 8.75, -52.9, 27.6], "unit": "ft", "evidence": "observed" },
         "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
         "style": { "value": "chain-link-black", "evidence": "observed" }
       },
@@ -471,7 +476,7 @@
       "kind": "fence",
       "objectId": "fence-front",
       "params": {
-        "points": { "value": [-50, -25, 32, -25], "unit": "ft", "evidence": "observed" },
+        "points": { "value": [-52.9, -23.4, 32, -23.4], "unit": "ft", "evidence": "observed" },
         "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
         "style": { "value": "chain-link-black", "evidence": "observed" }
       },
@@ -485,7 +490,7 @@
       "kind": "fence",
       "objectId": "fence-front",
       "params": {
-        "points": { "value": [46, -25, 50, -25], "unit": "ft", "evidence": "estimated" },
+        "points": { "value": [46, -23.4, 47.4, -23.4], "unit": "ft", "evidence": "estimated" },
         "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
         "style": { "value": "chain-link-black", "evidence": "observed" }
       },
@@ -499,7 +504,7 @@
       "kind": "gate",
       "objectId": "fence-front",
       "params": {
-        "s": { "value": -50, "unit": "ft", "evidence": "observed" },
+        "s": { "value": -52.9, "unit": "ft", "evidence": "observed" },
         "t": { "value": 7, "unit": "ft", "evidence": "estimated", "note": "Described as a corner gate aligned with the walkway; placed on the 250th St frontage in line with the door." },
         "width": { "value": 3.5, "unit": "ft", "evidence": "estimated" },
         "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
@@ -515,7 +520,7 @@
       "kind": "fence",
       "objectId": "fence-rear",
       "params": {
-        "points": { "value": [50, -25, 50, -8], "unit": "ft", "evidence": "estimated" },
+        "points": { "value": [47.4, -23.4, 47.4, -8], "unit": "ft", "evidence": "estimated" },
         "height": { "value": 6, "unit": "ft", "evidence": "estimated" },
         "style": { "value": "vinyl-white", "evidence": "observed" }
       },
@@ -528,7 +533,7 @@
       "id": "fence-2012-silver",
       "kind": "fence",
       "params": {
-        "points": { "value": [-50, -25, -50, 25], "unit": "ft", "evidence": "historical_approximation" },
+        "points": { "value": [-52.9, -23.4, -52.9, 27.6], "unit": "ft", "evidence": "historical_approximation" },
         "height": { "value": 4, "unit": "ft", "evidence": "estimated" },
         "style": { "value": "chain-link-silver", "evidence": "observed" }
       },
@@ -588,7 +593,7 @@
       "kind": "tree",
       "params": {
         "s": { "value": -18, "unit": "ft", "evidence": "estimated" },
-        "t": { "value": -29, "unit": "ft", "evidence": "estimated", "note": "In the sidewalk strip, outside the lot." },
+        "t": { "value": -27.4, "unit": "ft", "evidence": "estimated", "note": "In the sidewalk strip, outside the lot." },
         "height": { "value": 32, "unit": "ft", "evidence": "estimated" },
         "canopyRadius": { "value": 10, "unit": "ft", "evidence": "estimated" },
         "species": { "value": "mature-deciduous", "evidence": "observed" }
@@ -602,7 +607,7 @@
       "kind": "tree",
       "params": {
         "s": { "value": 8, "unit": "ft", "evidence": "estimated" },
-        "t": { "value": -29, "unit": "ft", "evidence": "estimated" },
+        "t": { "value": -27.4, "unit": "ft", "evidence": "estimated" },
         "height": { "value": 30, "unit": "ft", "evidence": "estimated" },
         "canopyRadius": { "value": 9, "unit": "ft", "evidence": "estimated" },
         "species": { "value": "mature-deciduous", "evidence": "observed" }
@@ -639,10 +644,10 @@
       "id": "context-sidewalk-250th",
       "kind": "context",
       "params": {
-        "sMin": { "value": -61, "unit": "ft", "evidence": "estimated" },
-        "sMax": { "value": -50, "unit": "ft", "evidence": "estimated" },
-        "tMin": { "value": -36, "unit": "ft", "evidence": "estimated" },
-        "tMax": { "value": 30, "unit": "ft", "evidence": "estimated" },
+        "sMin": { "value": -63.9, "unit": "ft", "evidence": "estimated" },
+        "sMax": { "value": -52.9, "unit": "ft", "evidence": "estimated" },
+        "tMin": { "value": -34.4, "unit": "ft", "evidence": "estimated" },
+        "tMax": { "value": 32.6, "unit": "ft", "evidence": "estimated" },
         "material": { "value": "sidewalk", "evidence": "estimated" }
       },
       "evidence": "estimated",
@@ -653,10 +658,10 @@
       "id": "context-sidewalk-139th",
       "kind": "context",
       "params": {
-        "sMin": { "value": -50, "unit": "ft", "evidence": "estimated" },
-        "sMax": { "value": 56, "unit": "ft", "evidence": "estimated" },
-        "tMin": { "value": -36, "unit": "ft", "evidence": "estimated" },
-        "tMax": { "value": -25, "unit": "ft", "evidence": "estimated" },
+        "sMin": { "value": -52.9, "unit": "ft", "evidence": "estimated" },
+        "sMax": { "value": 53.4, "unit": "ft", "evidence": "estimated" },
+        "tMin": { "value": -34.4, "unit": "ft", "evidence": "estimated" },
+        "tMax": { "value": -23.4, "unit": "ft", "evidence": "estimated" },
         "material": { "value": "sidewalk", "evidence": "estimated" }
       },
       "evidence": "estimated",
