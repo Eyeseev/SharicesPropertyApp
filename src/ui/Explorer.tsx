@@ -3,7 +3,7 @@
 import dynamic from 'next/dynamic'
 import { useEffect, useState } from 'react'
 import type { PropertyData } from '@/data/loader'
-import { useApp, type PresetId } from '@/state/store'
+import { initialQuality, useApp, type PresetId } from '@/state/store'
 import { TopBar } from './TopBar'
 import { CameraRail } from './CameraRail'
 import { SelectionPopup } from './SelectionPopup'
@@ -26,6 +26,11 @@ export function Explorer() {
   const [error, setError] = useState<string | null>(null)
   const goTo = useApp((s) => s.goTo)
   const select = useApp((s) => s.select)
+
+  // Remembered (or device-guessed) quality tier; applied once after mount to avoid SSR mismatch.
+  useEffect(() => {
+    useApp.setState({ quality: initialQuality() })
+  }, [])
 
   useEffect(() => {
     let alive = true

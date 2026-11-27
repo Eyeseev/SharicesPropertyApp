@@ -4,19 +4,19 @@ import { useEffect, useMemo } from 'react'
 import * as THREE from 'three'
 import { Canvas, useThree } from '@react-three/fiber'
 import type { CameraSet, GeometrySpec } from '@/data/schema'
-import { ft } from '@/data/frame'
 import { useApp } from '@/state/store'
 import { PropertyModel } from './PropertyModel'
 import { CameraRig } from './CameraRig'
 import { objectRegistry } from './registry'
 import { installProbe } from './probe'
 import { CanopyFader } from './CanopyFader'
-
-const DPR: Record<string, [number, number]> = {
-  showcase: [1, 2],
-  balanced: [1, 1.5],
-  simple: [1, 1],
-}
+import { QUALITY } from './style/quality'
+import { HORIZON, Lights, Sky } from './style/Atmosphere'
+import { GridGround } from './style/GridGround'
+import { GlowLines } from './style/GlowLines'
+import { Ambience } from './style/Ambience'
+import { Particles } from './style/Particles'
+import { Effects } from './style/Effects'
 
 /** Bounding-box outline for the hovered (white) and selected (gold) objects. */
 function Highlight() {
@@ -52,41 +52,32 @@ function Probe() {
 }
 
 export function Scene({ spec, cameras }: { spec: GeometrySpec; cameras: CameraSet }) {
-  const quality = useApp((s) => s.quality)
+  const tier = useApp((s) => s.quality)
   const select = useApp((s) => s.select)
-  const shadows = quality !== 'simple'
+  const q = QUALITY[tier]
   return (
     <Canvas
       className="scene-canvas"
-      shadows={shadows}
-      dpr={DPR[quality]}
-      camera={{ fov: 35, near: 0.1, far: 600, position: [-20, 20, -30] }}
-      gl={{ antialias: true, preserveDrawingBuffer: true }}
+      shadows={q.shadows}
+      dpr={q.dpr}
+      camera={{ fov: 35, near: 0.1, far: 700, position: [-20, 20, -30] }}
+      gl={{ antialias: !q.composer, preserveDrawingBuffer: true }}
       onPointerMissed={() => select(null)}
     >
-      <color attach="background" args={['#1d2533']} />
-      <fog attach="fog" args={['#1d2533', 90, 220]} />
-      <hemisphereLight args={['#dfe6f2', '#3a3f48', 0.9]} />
-      <directionalLight
-        position={[-25, 40, -18]}
-        intensity={1.6}
-        castShadow={shadows}
-        shadow-mapSize={[2048, 2048]}
-        shadow-camera-left={-25}
-        shadow-camera-right={25}
-        shadow-camera-top={25}
-        shadow-camera-bottom={-25}
-        shadow-bias={-0.0004}
-      />
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -ft(0.62), 0]} receiveShadow>
-        <planeGeometry args={[400, 400]} />
-        <meshStandardMaterial color="#3a4352" roughness={1} />
-      </mesh>
+      <color attach="background" args={[HORIZON]} />
+      <fog attach="fog" args={[HORIZON, 90, 260]} />
+      <Sky />
+      <Lights q={q} />
+      <GridGround q={q} />
+      <Particles count={q.particles} />
       <PropertyModel spec={spec} />
+      <GlowLines spec={spec} />
+      <Ambience spec={spec} q={q} />
       <Highlight />
       <CameraRig cameras={cameras} spec={spec} />
       <CanopyFader />
       <Probe />
+      <Effects q={q} />
     </Canvas>
   )
 }

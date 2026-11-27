@@ -1,12 +1,14 @@
 'use client'
 
-import { useMemo } from 'react'
+import { useEffect, useMemo } from 'react'
 import * as THREE from 'three'
 import type { GeometryElement, GeometrySpec } from '@/data/schema'
 import { ft } from '@/data/frame'
 import { color } from '../palette'
 import { bool, byId, list, num, str } from '../params'
-import { GablePrism, GableSlopes, LotBox } from './primitives'
+import { GablePrism, GableSlopes, LotBox, metricBox } from './primitives'
+import { surfaceProps } from '../style/surfaces'
+import { addWindSway, hashSeed, leafCluster } from '../style/vegetation'
 
 type HouseFrame = {
   sMin: number
@@ -40,6 +42,7 @@ export function HouseWalls({ el, f }: { el: GeometryElement; f: HouseFrame }) {
       name="house-walls"
       b={{ sMin: f.sMin, sMax: f.sMax, tMin: f.tMin, tMax: f.tMax, hMin: 0, hMax: f.eave }}
       color={color(str(el, 'wallMaterial'))}
+      surface="brick"
     />
   )
 }
@@ -67,6 +70,7 @@ export function RoofSection({ el, f }: { el: GeometryElement; f: HouseFrame }) {
         eave={f.eave}
         ridge={ridge - 0.3}
         color={color(str(el, 'gableSiding'))}
+        surface="siding"
       />
       <GableSlopes
         ridgeAlong="s"
@@ -78,6 +82,7 @@ export function RoofSection({ el, f }: { el: GeometryElement; f: HouseFrame }) {
         ridge={ridge - 0.35}
         overhang={overhang}
         color={color(str(el, 'color'))}
+        surface="shingle"
       />
       {band && (
         <GableSlopes
@@ -115,6 +120,7 @@ export function Chimney({ el }: { el: GeometryElement }) {
           hMax: top,
         }}
         color={color('brick')}
+        surface="brick"
       />
       <LotBox
         b={{
@@ -192,7 +198,12 @@ export function Window({ el, f }: { el: GeometryElement; f: HouseFrame }) {
   return (
     <group>
       <LotBox b={frame} color={color('white')} castShadow={false} />
-      <LotBox b={glass} color={color('glass')} castShadow={false} />
+      <LotBox
+        b={glass}
+        color={color('glass')}
+        castShadow={false}
+        surface={barred ? undefined : 'windowWarm'}
+      />
       {muntin && <LotBox b={muntin} color={color('white')} castShadow={false} />}
       {bars.map((b, i) => (
         <LotBox key={i} b={b} color={color('metal-black')} castShadow={false} />
@@ -256,7 +267,12 @@ export function FrontDoor({
       {arched && (
         <mesh position={[ft(along), ft(rectTop - 0.6), ft(f.sMin - 0.4)]} scale={[1, 1.4, 0.2]}>
           <sphereGeometry args={[ft(0.5), 16, 12]} />
-          <meshStandardMaterial color={color('glass')} roughness={0.2} />
+          <meshStandardMaterial
+            color={color('glass')}
+            roughness={0.2}
+            emissive="#ffb347"
+            emissiveIntensity={1.8}
+          />
         </mesh>
       )}
       {/* Small projecting gable porch roof over the door */}
@@ -264,7 +280,7 @@ export function FrontDoor({
         <GableSlopesAcross f={f} along={along} width={pw} depth={pd} eave={pe} peak={pp} />
       </group>
       {treads.map((b, i) => (
-        <LotBox key={i} b={b} color={color(str(steps, 'color'))} />
+        <LotBox key={i} b={b} color={color(str(steps, 'color'))} surface="concrete" />
       ))}
       {[-1, 1].map((side) => (
         <group key={side}>
@@ -349,7 +365,11 @@ export function Extension({ el }: { el: GeometryElement }) {
   const tc = (tMin + tMax) / 2
   return (
     <group>
-      <LotBox b={{ sMin, sMax, tMin, tMax, hMin: 0, hMax: h }} color={color(str(el, 'color'))} />
+      <LotBox
+        b={{ sMin, sMax, tMin, tMax, hMin: 0, hMax: h }}
+        color={color(str(el, 'color'))}
+        surface="siding"
+      />
       {/* Low, light, single-slope roof falling toward the SE */}
       <mesh
         position={[ft(tc), ft(h + 0.2 - drop / 2 + 0.3), ft((sMin + sMax + 0.6) / 2)]}
@@ -372,6 +392,7 @@ export function Extension({ el }: { el: GeometryElement }) {
         }}
         color={color('glass')}
         castShadow={false}
+        surface="windowWarm"
       />
       <LotBox
         b={{
@@ -403,7 +424,7 @@ export function Garage({ el }: { el: GeometryElement }) {
   const wall = color(str(el, 'wallColor'))
   return (
     <group>
-      <LotBox b={{ sMin, sMax, tMin, tMax, hMin: 0, hMax: eave }} color={wall} />
+      <LotBox b={{ sMin, sMax, tMin, tMax, hMin: 0, hMax: eave }} color={wall} surface="siding" />
       <GablePrism
         ridgeAlong="t"
         from={tMin}
@@ -413,6 +434,7 @@ export function Garage({ el }: { el: GeometryElement }) {
         eave={eave}
         ridge={ridge - 0.3}
         color={wall}
+        surface="siding"
       />
       <GableSlopes
         ridgeAlong="t"
@@ -424,6 +446,7 @@ export function Garage({ el }: { el: GeometryElement }) {
         ridge={ridge - 0.3}
         overhang={0.6}
         color={color(str(el, 'roofColor'))}
+        surface="shingleT"
       />
       {/* Single-car door on the SW end (door side derived, not confirmed) */}
       <LotBox
@@ -470,7 +493,36 @@ export function Slab({ el, h = 0.12 }: { el: GeometryElement; h?: number }) {
       }}
       color={color(str(el, 'material'))}
       castShadow={false}
+      surface="concrete"
     />
+  )
+}
+
+function FencePanel({
+  len,
+  height,
+  c,
+  solid,
+  pos,
+  yaw,
+}: {
+  len: number
+  height: number
+  c: string
+  solid: boolean
+  pos: [number, number]
+  yaw: number
+}) {
+  const geo = useMemo(
+    () => metricBox(ft(len), ft(height * 0.95), ft(solid ? 0.12 : 0.03)),
+    [len, height, solid],
+  )
+  // Chain-link: a wire-diamond alpha texture, so the lawn shows through the mesh.
+  const mat = solid ? { color: c, roughness: 0.6 } : surfaceProps('chain', c)
+  return (
+    <mesh geometry={geo} position={[ft(pos[0]), ft(height / 2), ft(pos[1])]} rotation={[0, yaw, 0]}>
+      <meshStandardMaterial {...mat} />
+    </mesh>
   )
 }
 
@@ -506,17 +558,7 @@ export function Fence({ el }: { el: GeometryElement }) {
                 </mesh>
               )
             })}
-            {/* Panel: mesh (chain-link, see-through) or solid vinyl */}
-            <mesh position={[ft(mt), ft(height / 2), ft(ms)]} rotation={[0, yaw, 0]}>
-              <boxGeometry args={[ft(len), ft(height * 0.95), ft(solid ? 0.12 : 0.03)]} />
-              <meshStandardMaterial
-                color={c}
-                transparent={!solid}
-                opacity={solid ? 1 : 0.35}
-                roughness={0.6}
-                side={THREE.DoubleSide}
-              />
-            </mesh>
+            <FencePanel len={len} height={height} c={c} solid={solid} pos={[mt, ms]} yaw={yaw} />
             <mesh position={[ft(mt), ft(height), ft(ms)]} rotation={[0, yaw, 0]}>
               <boxGeometry args={[ft(len), ft(0.12), ft(0.12)]} />
               <meshStandardMaterial color={c} roughness={0.5} />
@@ -560,6 +602,12 @@ export function Gate({ el }: { el: GeometryElement }) {
   )
 }
 
+const TONES: Record<string, [string, string, string]> = {
+  maple: ['#d9473f', '#a52a2e', '#5c1522'],
+  deciduous: ['#8fb15a', '#4f7a3c', '#233f2a'],
+  shrub: ['#86b259', '#47733a', '#213d28'],
+}
+
 export function Tree({ el }: { el: GeometryElement }) {
   const s = num(el, 's')
   const t = num(el, 't')
@@ -568,30 +616,70 @@ export function Tree({ el }: { el: GeometryElement }) {
   const species = str(el, 'species')
   const isMaple = species.includes('maple')
   const trunkH = h - r * (isMaple ? 1.1 : 1.3)
+  const canopy = useMemo(
+    () =>
+      leafCluster({
+        seed: hashSeed(el.id),
+        radius: ft(r),
+        blobs: isMaple ? 9 : 8,
+        squash: isMaple ? 0.7 : 0.85,
+        tones: isMaple ? TONES.maple! : TONES.deciduous!,
+      }),
+    [el.id, r, isMaple],
+  )
+  const material = useMemo(() => {
+    const m = new THREE.MeshStandardMaterial({
+      vertexColors: true,
+      roughness: 0.9,
+      transparent: !isMaple,
+      opacity: 1,
+    })
+    if (isMaple) {
+      m.emissive = new THREE.Color('#4a0d10')
+      m.emissiveIntensity = 0.55
+    }
+    addWindSway(m, isMaple ? 0.012 : 0.008)
+    return m
+  }, [isMaple])
+  useEffect(() => () => material.dispose(), [material])
   // Large trees fade out while they stand between the camera and the house (CanopyFader).
   return (
     <group>
       <mesh position={[ft(t), ft(trunkH / 2), ft(s)]} castShadow>
         <cylinderGeometry
-          args={[ft(isMaple ? 0.3 : 0.7), ft(isMaple ? 0.4 : 0.9), ft(trunkH), 8]}
+          args={[ft(isMaple ? 0.25 : 0.6), ft(isMaple ? 0.4 : 0.9), ft(trunkH), 8]}
         />
         <meshStandardMaterial color={color('trunk')} roughness={0.9} />
       </mesh>
+      {[0, 1, 2].map((k) => {
+        const a = (k / 3) * Math.PI * 2 + 0.6
+        const spread = isMaple ? 1.2 : r * 0.12
+        const limb = isMaple ? 3.2 : r * 0.55
+        return (
+          <mesh
+            key={k}
+            position={[
+              ft(t + Math.cos(a) * spread),
+              ft(trunkH + limb * 0.28),
+              ft(s + Math.sin(a) * spread),
+            ]}
+            rotation={[Math.sin(a) * 0.55, 0, -Math.cos(a) * 0.55]}
+            castShadow
+          >
+            <cylinderGeometry
+              args={[ft(isMaple ? 0.08 : 0.22), ft(isMaple ? 0.16 : 0.4), ft(limb), 6]}
+            />
+            <meshStandardMaterial color={color('trunk')} roughness={0.9} />
+          </mesh>
+        )
+      })}
       <mesh
         position={[ft(t), ft(h - r), ft(s)]}
-        scale={[1, isMaple ? 0.75 : 0.85, 1]}
+        geometry={canopy}
+        material={material}
         castShadow
         userData={isMaple ? undefined : { fadeRadius: ft(r) }}
-      >
-        <icosahedronGeometry args={[ft(r), 1]} />
-        <meshStandardMaterial
-          color={color(species)}
-          roughness={0.85}
-          flatShading
-          transparent={!isMaple}
-          opacity={1}
-        />
-      </mesh>
+      />
     </group>
   )
 }
@@ -602,6 +690,17 @@ export function ShrubRow({ el }: { el: GeometryElement }) {
   const h = num(el, 'height')
   const len = Math.hypot(to[0]! - from[0]!, to[1]! - from[1]!)
   const n = Math.max(2, Math.round(len / 2.2))
+  const geo = useMemo(
+    () =>
+      leafCluster({
+        seed: hashSeed(el.id),
+        radius: ft(h * 0.6),
+        blobs: 4,
+        squash: 0.85,
+        tones: TONES.shrub!,
+      }),
+    [el.id, h],
+  )
   return (
     <group>
       {Array.from({ length: n }, (_, k) => {
@@ -609,9 +708,14 @@ export function ShrubRow({ el }: { el: GeometryElement }) {
         const s = from[0]! + (to[0]! - from[0]!) * u
         const t = from[1]! + (to[1]! - from[1]!) * u
         return (
-          <mesh key={k} position={[ft(t), ft(h / 2), ft(s)]} castShadow>
-            <icosahedronGeometry args={[ft(h * 0.55), 1]} />
-            <meshStandardMaterial color={color('shrub')} roughness={0.9} flatShading />
+          <mesh
+            key={k}
+            geometry={geo}
+            position={[ft(t), ft(h / 2), ft(s)]}
+            castShadow
+            receiveShadow
+          >
+            <meshStandardMaterial vertexColors roughness={0.9} />
           </mesh>
         )
       })}
@@ -625,17 +729,6 @@ export function Parcel({ el }: { el: GeometryElement }) {
   const tMin = num(el, 'tMin')
   const tMax = num(el, 'tMax')
   const th = num(el, 'platformThickness')
-  const outline = useMemo(() => {
-    const y = ft(0.02)
-    const pts = [
-      [tMin, sMin],
-      [tMax, sMin],
-      [tMax, sMax],
-      [tMin, sMax],
-      [tMin, sMin],
-    ].map(([t, s]) => new THREE.Vector3(ft(t!), y, ft(s!)))
-    return new THREE.BufferGeometry().setFromPoints(pts)
-  }, [sMin, sMax, tMin, tMax])
   return (
     <group>
       <LotBox
@@ -647,10 +740,8 @@ export function Parcel({ el }: { el: GeometryElement }) {
         b={{ sMin, sMax, tMin, tMax, hMin: -0.03, hMax: 0 }}
         color={color('lawn')}
         castShadow={false}
+        surface="lawn"
       />
-      <lineLoop geometry={outline} raycast={() => null}>
-        <lineBasicMaterial color="#e9d9a6" />
-      </lineLoop>
     </group>
   )
 }
@@ -668,6 +759,7 @@ export function ContextStrip({ el, platform }: { el: GeometryElement; platform: 
       }}
       color={color(str(el, 'material'))}
       castShadow={false}
+      surface="concrete"
     />
   )
 }

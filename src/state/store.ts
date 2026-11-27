@@ -4,6 +4,23 @@ import type { SelectableId } from '@/data/schema'
 export type PresetId = 'default' | 'front' | 'side' | 'rear' | 'top'
 export type QualityTier = 'showcase' | 'balanced' | 'simple'
 
+const QUALITY_KEY = 'property-quality-tier'
+const TIERS: QualityTier[] = ['showcase', 'balanced', 'simple']
+
+/** Remembered choice if any, else a device guess: phones get Simple, modest desktops Balanced. */
+export function initialQuality(): QualityTier {
+  try {
+    const saved = window.localStorage.getItem(QUALITY_KEY) as QualityTier | null
+    if (saved && TIERS.includes(saved)) return saved
+  } catch {
+    // Storage can be blocked; fall through to the device guess.
+  }
+  const coarse = window.matchMedia?.('(pointer: coarse)').matches ?? false
+  if (coarse || window.innerWidth < 800) return 'simple'
+  if ((navigator.hardwareConcurrency ?? 8) <= 4) return 'balanced'
+  return 'showcase'
+}
+
 type AppState = {
   selectedId: SelectableId | null
   hoveredId: SelectableId | null
@@ -28,5 +45,12 @@ export const useApp = create<AppState>((set) => ({
   hover: (hoveredId) => set({ hoveredId }),
   goTo: (id) => set((s) => ({ presetRequest: { id, n: s.presetRequest.n + 1 } })),
   setCameraMoving: (cameraMoving) => set({ cameraMoving }),
-  setQuality: (quality) => set({ quality }),
+  setQuality: (quality) => {
+    try {
+      window.localStorage.setItem(QUALITY_KEY, quality)
+    } catch {
+      // Not remembered this time; the tier still applies.
+    }
+    set({ quality })
+  },
 }))

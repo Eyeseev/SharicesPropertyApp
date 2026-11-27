@@ -184,3 +184,12 @@ describe('evidence and sources', () => {
     }
   })
 })
+
+describe('stylistic lighting stays out of the property record (CREATIVE_DIRECTION §3.4)', () => {
+  it('geometry spec has no lanterns, path lights, marker posts or light pools', () => {
+    const spec = GeometrySpec.parse(geometryRaw())
+    const text = JSON.stringify(spec).toLowerCase()
+    for (const word of ['lantern', 'path-light', 'pathlight', 'marker post', 'light pool', 'bokeh'])
+      expect(text).not.toContain(word)
+  })
+})

@@ -1,9 +1,9 @@
 /**
- * Flat colours matching the observed materials (Phase 0.1: neutral, readable forms only).
- * Signature materials, glow and bloom arrive in Phase 0.2.
+ * Colours matching the observed materials. Since Phase 0.2 these tint the procedural surface
+ * textures in `style/surfaces.ts` (brick carries its own colour); glow and bloom live in `style/`.
  */
 export const PALETTE: Record<string, string> = {
-  'brick-red-brown': '#8a4a3a',
+  'brick-red-brown': '#9a5240',
   cream: '#efe3c4',
   white: '#f2f1ec',
   'shingle-dark': '#3d3a3b',
@@ -13,7 +13,7 @@ export const PALETTE: Record<string, string> = {
   'concrete-red-brown': '#8d5444',
   stone: '#b9b2a3',
   glass: '#2b3440',
-  lawn: '#5e7f45',
+  lawn: '#7da35a',
   'platform-side': '#2c3442',
   ground: '#3a4352',
   sidewalk: '#8f9196',
